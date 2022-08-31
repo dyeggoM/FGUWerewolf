@@ -826,4 +826,49 @@
 			<script file="common/scripts/template_checkbox.lua" />
 		</genericcontrol>
 	</template>
+	
+	<template name="DotBoxControl">
+		<genericcontrol>
+			<boxicons>
+				<empty mergerule="replace">box_empty</empty>
+				<slash mergerule="replace">box_slash</slash>
+				<cross mergerule="replace">box_cross</cross>
+				<star mergerule="replace">box_star</star>
+			</boxicons>
+			<degree mergerule="replace">3</degree>
+			<doticons>
+				<on mergerule="replace">dot_checked</on>
+				<off mergerule="replace">dot_unchecked</off>
+			</doticons>
+			<dots mergerule="replace">10</dots>
+			<nodenames>
+				<cross mergerule="replace">lethal</cross>
+				<slash mergerule="replace">bashing</slash>
+				<star mergerule="replace">aggrevated</star>
+			</nodenames>
+			<script file="common/scripts/template_dotboxcontrol.lua" />
+			<spacing>
+				<horizontal mergerule="replace">10</horizontal>
+				<vertical mergerule="replace">12</vertical>
+			</spacing>
+		</genericcontrol>
+	</template>
+
+	
+	<template name="CheckboxControl">
+		<genericcontrol>
+			<default mergerule="replace">0</default>
+			<dots mergerule="replace">10</dots>
+			<rowcount mergerule="replace">1</rowcount>
+			<spacing>
+				<horizontal mergerule="replace">10</horizontal>
+				<vertical mergerule="replace">10</vertical>
+			</spacing>
+			<stateicons>
+				<on mergerule="replace">box_cross</on>
+				<off mergerule="replace">box_empty</off>
+			</stateicons>
+			<script file="common/scripts/template_dotcontrol.lua" />
+		</genericcontrol>
+	</template>
 </root>

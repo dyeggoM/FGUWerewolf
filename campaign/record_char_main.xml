@@ -73,9 +73,8 @@
 		<margins control="0,0,0,2" />
 		<sheetdata>
 		
-			<!-- ATTRIBUTES: Mental -->
-			
-			<genericcontrol name="attributes0">
+			<!-- ATTRIBUTES: Types -->
+			<genericcontrol name="attributesTypes">
 				<!-- <bounds>12,98,160,70</bounds> -->
 				<bounds>15,0,100,70</bounds>
 				<frame>
@@ -84,7 +83,7 @@
 			</genericcontrol>
 			<StringControl name="power">
 				<anchored>
-					<to>attributes0</to>
+					<to>attributesTypes</to>
 					<position>insidetopleft</position>
 					<offset>10,10</offset>
 					<size>
@@ -128,9 +127,8 @@
 				<static>Resistance</static>
 			</StringControl>
 
-
-
-			<genericcontrol name="attributes1">
+			<!-- ATTRIBUTES: Mental -->
+			<genericcontrol name="attributesMental">
 				<!-- <bounds>12,98,160,70</bounds> -->
 				<bounds>115,0,160,70</bounds>
 				<frame>
@@ -139,7 +137,7 @@
 			</genericcontrol>
 			<StringControl name="intlabel">
 				<anchored>
-					<to>attributes1</to>
+					<to>attributesMental</to>
 					<position>insidetopleft</position>
 					<offset>10,10</offset>
 					<size>
@@ -256,7 +254,7 @@
 			</DotControl>
 
 			<!-- ATTRIBUTES: Physical -->
-			<genericcontrol name="attributes2">
+			<genericcontrol name="attributesPhysical">
 				<!-- <bounds>172,98,160,70</bounds> -->
 				<bounds>275,0,160,70</bounds>
 				<frame>
@@ -265,7 +263,7 @@
 			</genericcontrol>
 			<StringControl name="strlabel">
 				<anchored>
-					<to>attributes2</to>
+					<to>attributesPhysical</to>
 					<position>insidetopleft</position>
 					<offset>10,10</offset>
 					<size>
@@ -382,7 +380,7 @@
 			</DotControl>
 
 			<!-- ATTRIBUTES: Social -->
-			<genericcontrol name="attributes3">
+			<genericcontrol name="attributesSocial">
 				<!-- <bounds>332,98,160,70</bounds> -->
 				<bounds>435,0,160,70</bounds>
 				<frame>
@@ -391,7 +389,7 @@
 			</genericcontrol>
 			<StringControl name="prelabel">
 				<anchored>
-					<to>attributes3</to>
+					<to>attributesSocial</to>
 					<position>insidetopleft</position>
 					<offset>10,10</offset>
 					<size>
@@ -569,7 +567,7 @@
 
 			<!-- Merits -->
 			<genericcontrol name="meritframe">
-				<bounds>275,80,240,240</bounds>
+				<bounds>275,80,160,160</bounds>
 				<frame>
 					<name>sheetgroup</name>
 				</frame>
@@ -577,9 +575,10 @@
 			<StringControl>
 				<anchored>
 					<to>meritframe</to>
-					<position>insidetopleft</position>
+					<position>insidetop</position>
 					<offset>12,13</offset>
 				</anchored>
+				<center/>
 				<font>sheetlabel</font>
 				<static>Merits</static>
 			</StringControl>
@@ -628,25 +627,10 @@
 					end
 				</script>
 			</windowlist>
-			<scrollercontrol>
-				<anchored>
-					<to>merits</to>
-					<position>insidebottomright</position>
-					<size>
-						<width>45</width>
-						<height>27</height>
-					</size>
-				</anchored>
-				<target>merits</target>
-				<button>
-					<normal>button_scroller</normal>
-					<pressed>button_scroller_down</pressed>
-				</button>
-			</scrollercontrol>
 
 			<!-- Flaws -->
-			<!-- <genericcontrol name="flawframe">
-				<bounds>275,335,240,160</bounds>
+			<genericcontrol name="flawframe">
+				<bounds>275,240,160,100</bounds>
 				<frame>
 					<name>sheetgroup</name>
 				</frame>
@@ -654,9 +638,10 @@
 			<StringControl>
 				<anchored>
 					<to>flawframe</to>
-					<position>insidetopleft</position>
+					<position>insidetop</position>
 					<offset>12,13</offset>
 				</anchored>
+				<center/>
 				<font>sheetlabel</font>
 				<static>Flaws</static>
 			</StringControl>
@@ -689,12 +674,294 @@
 					<name>textline</name>
 					<offset>2,0,2,0</offset>
 				</frame>
-			</StringField> -->
+			</StringField>
+
+			<!-- Aspirations -->
+			<genericcontrol name="aspirationframe">
+				<bounds>275,340,160,80</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl>
+				<anchored>
+					<to>aspirationframe</to>
+					<position>insidetop</position>
+					<offset>12,13</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Aspirations</static>
+			</StringControl>
+			<StringField name="aspirations">
+				<anchored>
+					<top>
+						<parent>aspirationframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>aspirationframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>aspirationframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>aspirationframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Conditions -->
+			<genericcontrol name="conditionframe">
+				<bounds>275,420,160,80</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl>
+				<anchored>
+					<to>conditionframe</to>
+					<position>insidetop</position>
+					<offset>12,13</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Conditions</static>
+			</StringControl>
+			<StringField name="conditions">
+				<anchored>
+					<top>
+						<parent>conditionframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>conditionframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>conditionframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>conditionframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
 
 
+			<!-- Health -->
+			<genericcontrol name="healthframe">
+				<bounds>435,80,160,60</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl name="healthLabel">
+				<anchored>
+					<to>healthframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<static>Health</static>
+				<font>sheetlabel</font>
+			</StringControl>
+			<DotBoxControl name="health">
+				<anchored>
+					<top>
+						<parent>healthLabel</parent>
+						<anchor>bottom</anchor>
+						<offset>1</offset>
+					</top>
+					<left>
+						<parent>healthframe</parent>
+						<anchor>left</anchor>
+						<offset>20</offset>
+					</left>
+					<size>
+						<width>120</width>
+						<height>25</height>
+					</size>
+				</anchored>
+				<dots>12</dots>
+			</DotBoxControl>
 
+			<!-- Willpower -->
+			<genericcontrol name="willpowerframe">
+				<bounds>435,140,160,60</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl name="willpowerLabel">
+				<anchored>
+					<to>willpowerframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<static>Willpower</static>
+				<font>sheetlabel</font>
+			</StringControl>
+			<DotBoxControl name="willpower">
+				<anchored>
+					<top>
+						<parent>willpowerLabel</parent>
+						<anchor>bottom</anchor>
+						<offset>1</offset>
+					</top>
+					<left>
+						<parent>willpowerframe</parent>
+						<anchor>left</anchor>
+						<offset>20</offset>
+					</left>
+					<size>
+						<width>120</width>
+						<height>25</height>
+					</size>
+				</anchored>
+				<degree>1</degree>
+				<dots>10</dots>
+				<nodenames>
+					<slash>spent</slash>
+				</nodenames>
+			</DotBoxControl>
 
+			<!-- Primal Urge -->
+			<genericcontrol name="primalurgeframe">
+				<bounds>435,200,160,45</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl name="primalurgeLabel">
+				<anchored>
+					<to>primalurgeframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<static>Primal Urge</static>
+				<font>sheetlabel</font>
+			</StringControl>
+			<DotControl name="primalurge">
+				<anchored>
+					<top>
+						<parent>primalurgeLabel</parent>
+						<anchor>bottom</anchor>
+						<offset>1</offset>
+					</top>
+					<left>
+						<parent>primalurgeframe</parent>
+						<anchor>left</anchor>
+						<offset>20</offset>
+					</left>
+					<size>
+						<width>120</width>
+						<height>25</height>
+					</size>
+				</anchored>
+				<dots>10</dots>
+			</DotControl>
 
+			<!-- Essence -->
+			<genericcontrol name="essenceframe">
+				<bounds>435,245,160,55</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl name="essenceLabel">
+				<anchored>
+					<to>essenceframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<static>Essence</static>
+				<font>sheetlabel</font>
+			</StringControl>
+			<CheckboxControl name="essence">
+				<anchored>
+					<top>
+						<parent>essenceLabel</parent>
+						<anchor>bottom</anchor>
+						<offset>1</offset>
+					</top>
+					<left>
+						<parent>essenceframe</parent>
+						<anchor>left</anchor>
+						<offset>20</offset>
+					</left>
+					<size>
+						<width>120</width>
+						<height>25</height>
+					</size>
+				</anchored>
+				<dots>20</dots>
+				<rowcount>2</rowcount>
+			</CheckboxControl>
+
+			<!-- Harmony -->
+			<genericcontrol name="harmonyframe">
+				<bounds>435,300,160,45</bounds>
+				<frame>
+					<name>sheetgroup</name>
+				</frame>
+			</genericcontrol>
+			<StringControl name="harmonyLabel">
+				<anchored>
+					<to>harmonyframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<static>Harmony</static>
+				<font>sheetlabel</font>
+			</StringControl>
+			<DotControl name="harmony">
+				<anchored>
+					<top>
+						<parent>harmonyLabel</parent>
+						<anchor>bottom</anchor>
+						<offset>1</offset>
+					</top>
+					<left>
+						<parent>harmonyframe</parent>
+						<anchor>left</anchor>
+						<offset>20</offset>
+					</left>
+					<size>
+						<width>120</width>
+						<height>25</height>
+					</size>
+				</anchored>
+				<dots>10</dots>
+			</DotControl>
 
 			<!-- <frame_char name="attributesframe">
 				<bounds>15,0,-29,-50</bounds>

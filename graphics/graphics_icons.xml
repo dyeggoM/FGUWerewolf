@@ -376,7 +376,13 @@
 	<icon name="toolbar_off" file="graphics/icons/toolbar_off.png" />
 	<icon name="refresh" file="graphics/icons/refresh.png" />
 	
-  <!-- dot control icons -->
-  <icon name="dot_checked" file="graphics/icons/dot_checked.png" />
-  <icon name="dot_unchecked" file="graphics/icons/dot_unchecked.png" />
+	<!-- dot control icons -->
+	<icon name="dot_checked" file="graphics/icons/dot_checked.png" />
+	<icon name="dot_unchecked" file="graphics/icons/dot_unchecked.png" />
+	
+	<!-- box control icons -->
+	<icon name="box_empty" file="graphics/icons/box_empty.png" />
+	<icon name="box_slash" file="graphics/icons/box_slash.png" />
+	<icon name="box_cross" file="graphics/icons/box_cross.png" />
+	<icon name="box_star" file="graphics/icons/box_star.png" />
 </root>
