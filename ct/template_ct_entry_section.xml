@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<!-- TODO - Generalize full width list? (list_clientct_section_effects) -->
+
+	<!-- Summary string sections (2022-08-16) -->
+	<template name="string_ct_entry_summary">
+		<stringcontrol>
+			<anchored>
+				<top parent="active_spacer_top" anchor="bottom" relation="relative" offset="2" />
+				<left offset="75" />
+				<right offset="-10" />
+			</anchored>
+			<multilinespacing>16</multilinespacing>
+			<font>sheettext</font>
+			<static />
+			<nodrag />
+			<invisible />
+		</stringcontrol>
+	</template>
+
+	<!-- Section toggles (2022-08-16) -->
+	<template name="button_ct_section">
+		<buttoncontrol>
+			<anchored to="rightanchor" width="20" height="20">
+				<top />
+				<right anchor="left" relation="relative" offset="0" />
+			</anchored>
+			<script>
+				function onValueChanged()
+					window.onSectionChanged(target[1]);
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+
+	<!-- Section container (2022-08-16) -->
+	<template name="sub_ct_section">
+		<subwindow>
+			<anchored>
+				<top parent="active_spacer_top" anchor="bottom" relation="relative" />
+				<left offset="50" />
+				<right offset="-5" />
+			</anchored>
+		</subwindow>
+	</template>
+
+	<!-- Section internals (2022-08-16) -->
+	<template name="icon_ct_section">
+		<genericcontrol name="icon_section">
+			<anchored position="insidetopleft" offset="0,10" width="20" height="20" />
+		</genericcontrol>
+	</template>
+	<template name="anchor_ct_section">
+		<genericcontrol name="anchor_section">
+			<anchored position="insidetopright" offset="10,0" height="0">
+				<left parent="icon_section" anchor="right" offset="10" />
+			</anchored>
+			<disabled />
+		</genericcontrol>
+	</template>
+	<template name="anchor_ct_subsection">
+		<genericcontrol name="anchor_section">
+			<anchored position="insidetop" height="0" />
+			<disabled />
+		</genericcontrol>
+	</template>
+	<template name="frame_ct_section">
+		<genericcontrol>
+			<anchored position="over" />
+			<frame name="ct_subgroupbox" />
+			<disabled />
+		</genericcontrol>
+	</template>
+	<template name="label_ct_section">
+		<label>
+			<anchored position="lefthigh" offset="5,0" width="70" />
+			<static />
+		</label>
+	</template>
+	<template name="list_ct_section_labeled">
+		<windowlist>
+			<anchored to="anchor_section">
+				<top anchor="bottom" relation="relative" offset="3" />
+				<left offset="80" />
+				<right />
+				<sizelimits><minimum height="24" /></sizelimits>
+			</anchored>
+			<noscroll />
+			<script>
+				function onInit()
+					if hideonempty then
+						self.onListChanged();
+					end
+				end
+				function onListChanged()
+					if hideonempty then
+						local bShow = (getWindowCount() > 0);
+						setVisible(bShow);
+
+						local sLabel = getName() .. "_label";
+						if window[sLabel] then
+							window[sLabel].setVisible(bShow);
+						end
+					end
+				end
+			</script>
+		</windowlist>
+	</template>
+	<template name="string_ct_section_labeled">
+		<stringu>
+			<anchored to="anchor_section">
+				<top anchor="bottom" relation="relative" offset="5" />
+				<left offset="80" />
+				<right offset="-5" />
+			</anchored>
+			<multilinespacing>20</multilinespacing>
+		</stringu>
+	</template>
+	<template name="list_ct_section_full">
+		<windowlist>
+			<anchored to="anchor_section">
+				<top anchor="bottom" relation="relative" offset="10" />
+				<left />
+				<right />
+			</anchored>
+			<noscroll />
+		</windowlist>
+	</template>
+
+	<!-- Section - Targets (2022-08-16) -->
+	<template name="string_ct_entry_targets">
+		<string_ct_entry_summary>
+			<script file="ct/scripts/ct_target_summary.lua" />
+		</string_ct_entry_summary>
+	</template>
+	<template name="button_ct_section_targets">
+		<button_ct_section>
+			<tooltip textres="ct_tooltip_targeting" />
+			<state icon="button_section_targeting" merge="add" />
+			<state icon="button_section_targeting_down" merge="add" />
+			<target>targets</target>
+		</button_ct_section>
+	</template>
+	<template name="list_ct_section_targets">
+		<list_ct_section_full>
+			<anchored>
+				<right offset="-50" />
+				<sizelimits><minimum height="20" /></sizelimits>
+			</anchored>
+			<datasource>.targets</datasource>
+			<class>ct_target</class>
+			<columns>
+				<width>26</width>
+				<fillwidth />
+			</columns>
+		</list_ct_section_full>
+	</template>
+
+	<!-- Section - Space (2022-08-16) -->
+	<template name="button_ct_section_space">
+		<button_ct_section>
+			<tooltip textres="ct_tooltip_space" />
+			<state icon="button_space" merge="add" />
+			<state icon="button_space_down" merge="add" />
+			<target>space</target>
+		</button_ct_section>
+	</template>
+	<template name="label_ctentry_space">
+		<label name="spacelabel">
+			<anchored to="space" position="lefthigh" offset="10,0"/>
+			<static textres="ct_label_size" />
+		</label>
+	</template>
+	<template name="label_ctentry_reach">
+		<label name="reachlabel">
+			<anchored to="reach" position="lefthigh" offset="10,0"/>
+			<static textres="ct_label_reach" />
+		</label>
+	</template>
+	<template name="number_ct_section_space_size">
+		<number_ct name="space">
+			<anchored to="anchor_section">
+				<top anchor="bottom" relation="relative" offset="10" />
+				<left offset="40" />
+			</anchored>
+			<description textres="ct_tooltip_size" />
+			<hideonvalue value="0" />
+			<default>1</default>
+		</number_ct>
+	</template>
+	<template name="number_ct_section_space_reach">
+		<number_ct name="reach">
+			<anchored to="space" position="righthigh" offset="60,0" />
+			<description textres="ct_tooltip_reach" />
+			<hideonvalue value="0" />
+			<default>1</default>
+		</number_ct>
+	</template>
+
+	<!-- Section - Effects (2022-08-16) -->
+	<template name="string_ct_entry_effects">
+		<string_ct_entry_summary>
+			<script file="ct/scripts/ct_effect_summary.lua" />
+		</string_ct_entry_summary>
+	</template>
+	<template name="button_ct_section_effects">
+		<button_ct_section>
+			<tooltip textres="ct_tooltip_effects" />
+			<state icon="button_effect" merge="add" />
+			<state icon="button_effect_down" merge="add" />
+			<target>effects</target>
+		</button_ct_section>
+	</template>
+	<template name="list_ct_section_effects">
+		<list_ct_section_full>
+			<datasource>.effects</datasource>
+			<class>ct_effect</class>
+			<script file="ct/scripts/ct_effectlist.lua" />
+		</list_ct_section_full>
+	</template>
+	<template name="button_ct_section_effect_iadd">
+		<button_iadd name="effects_iadd">
+			<anchored to="anchor_section">
+				<top anchor="bottom" relation="relative" offset="3" />
+				<right offset="-4" />
+			</anchored>
+			<target>effects</target>
+			<tooltip textres="ct_tooltip_effectadd" />
+		</button_iadd>
+	</template>
+	<template name="list_clientct_section_effects">
+		<windowlist>
+			<anchored position="insidetopright" offset="0,4">
+				<left parent="icon_section" anchor="right" />
+			</anchored>
+			<datasource>.effects</datasource>
+			<class>clientct_effect</class>
+			<noscroll />
+			<script file="ct/scripts/clientct_effectlist.lua" />
+		</windowlist>
+	</template>
+	
+	<!-- Section - Effects (Original) -->
+	<template name="string_ct_effect">
+		<stringu name="label">
+			<anchored>
+				<top parent="leftanchor" />
+				<left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+				<right parent="rightanchor" anchor="left" relation="relative" offset="-10" />
+			</anchored>
+			<multilinespacing>20</multilinespacing>
+			<stateframe>
+				<drophilight name="fieldfocus" offset="7,5,7,5" />
+			</stateframe>
+			<droptypes>
+				<type>combattrackerentry</type>
+			</droptypes>
+			<script file="ct/scripts/ct_effectlabel.lua" />
+		</stringu>
+	</template>
+	<template name="base_ct_effect">
+		<genericcontrol name="base">
+			<bounds>0,0,-1,-1</bounds>
+			<script>
+				function onDragStart(button, x, y, draginfo)
+					return window.onDragStart(button, x, y, draginfo);
+				end
+				function onDrop(x, y, draginfo)
+					return window.onDrop(x, y, draginfo);
+				end
+			</script>
+		</genericcontrol>
+	</template>
+	<template name="anchor_ct_effect_left">
+		<genericcontrol name="leftanchor">
+			<anchored position="insidetopleft" offset="2,2" height="0" width="0" />
+		</genericcontrol>
+	</template>
+	<template name="anchor_ct_effect_right">
+		<genericcontrol name="rightanchor">
+			<anchored position="insidetopright" offset="2,2" height="0" width="0" />
+		</genericcontrol>
+	</template>
+	<template name="button_ct_effect_isactive">
+		<buttonfield name="isactive">
+			<anchored to="leftanchor" width="24" height="10">
+				<top />
+				<left anchor="right" relation="relative" offset="2" />
+			</anchored>
+			<default>1</default>
+			<state icon="button_toggle_off" tooltipres="ct_tooltip_effectoff" />
+			<state icon="button_toggle_on" tooltipres="ct_tooltip_effecton" />
+			<state icon="button_toggle_skip" tooltipres="ct_tooltip_effectskip" />
+		</buttonfield>
+	</template>
+	<template name="button_ct_effect_isgmonly">
+		<buttonfield name="isgmonly">
+			<anchored to="isactive" position="belowleft" width="24" height="10" />
+			<state icon="button_toggle_visible" tooltipres="visibilityon" />
+			<state icon="button_toggle_gm" tooltipres="visibilityoff" />
+		</buttonfield>
+	</template>
+	<template name="button_ct_effect_apply">
+		<button_iconcycler name="apply">
+			<anchored to="leftanchor" width="24" height="10">
+				<top offset="5" />
+				<left anchor="right" relation="relative" offset="2" />
+			</anchored>
+			<parameters>
+				<icons>button_toggle_action|button_toggle_roll|button_toggle_single</icons>
+				<values>action|roll|single</values>
+				<tooltipsres>effect_tooltip_applyone|effect_tooltip_applyroll|effect_tooltip_applysingle</tooltipsres>
+				<defaulticon>button_toggle_all</defaulticon>
+				<defaulttooltipres>effect_tooltip_applyall</defaulttooltipres>
+			</parameters>
+		</button_iconcycler>
+	</template>
+	<template name="number_ct_effect_init">
+		<basicnumber name="init">
+			<anchored to="rightanchor" width="20" height="20">
+				<top />
+				<right anchor="left" relation="relative" offset="-5" />
+			</anchored>
+			<frame name="durationadjustment" offset="7,5,7,5" />
+			<tooltip textres="ct_tooltip_effectinit" />
+			<script>
+				function onDragStart(button, x, y, draginfo)
+					return window.onDragStart(button, x, y, draginfo);
+				end
+
+				function onDrop(x, y, draginfo)
+					if draginfo.getType() ~= "number" then
+						return window.onDrop(x, y, draginfo);
+					end
+				end
+			</script>
+		</basicnumber>
+	</template>
+	<template name="number_ct_effect_duration">
+		<basicnumber name="duration">
+			<anchored to="rightanchor" height="20">
+				<sizelimits>
+					<minimum width="20" />
+				</sizelimits>
+				<top />
+				<right anchor="left" relation="relative" offset="-10" />
+			</anchored>
+			<min>0</min>
+			<tooltip textres="ct_tooltip_effectdur" />
+			<script>
+				function onDragStart(button, x, y, draginfo)
+					return window.onDragStart(button, x, y, draginfo);
+				end
+
+				function onDrop(x, y, draginfo)
+					if draginfo.getType() ~= "number" then
+						return window.onDrop(x, y, draginfo);
+					end
+				end
+			</script>
+		</basicnumber>
+	</template>
+
+	<template name="string_clientct_effect">
+		<simplestring name="label">
+			<anchored height="20">
+				<top parent="leftanchor" />
+				<left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+				<right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
+			</anchored>
+			<readonly />
+			<script file="ct/scripts/clientct_effectlabel.lua" />
+		</simplestring>
+	</template>
+	<template name="anchor_clientct_effect_left">
+		<genericcontrol name="leftanchor">
+			<anchored position="insidetopleft" offset="2,3" height="0" width="0" />
+		</genericcontrol>
+	</template>
+	<template name="anchor_clientct_effect_right">
+		<genericcontrol name="rightanchor">
+			<anchored position="insidetopright" offset="2,3" height="0" width="0" />
+		</genericcontrol>
+	</template>
+	<template name="button_clientct_effect_idelete">
+		<button_idelete name="idelete">
+			<anchored to="rightanchor">
+				<top />
+				<right anchor="left" relation="relative" offset="-2" />
+			</anchored>
+			<tooltip textres="ct_tooltip_effectdelete" />
+			<invisible merge="delete" />
+		</button_idelete>
+	</template>
+	<template name="button_clientct_effect_isactive">
+		<buttonfield name="isactive">
+			<anchored to="leftanchor" width="24" height="10">
+				<top offset="5" />
+				<left anchor="right" relation="relative" offset="2" />
+			</anchored>
+			<default>1</default>
+			<state icon="button_toggle_off" tooltipres="ct_tooltip_effectoff" />
+			<state icon="button_toggle_on" tooltipres="ct_tooltip_effecton" />
+			<state icon="button_toggle_skip" tooltipres="ct_tooltip_effectskip" />
+		</buttonfield>
+	</template>
+
+	<template name="hs_ct_effect_source">
+		<hs name="source_name">
+			<script>
+				function onInit()
+					onValueChanged();
+				end
+				function onValueChanged()
+					local sSource = getValue();
+					if sSource ~= "" then
+						sSource = DB.getValue(DB.getPath(sSource, "name"), "");
+					end
+					if sSource == "" then
+						window.source.setValue("");
+						window.source.setVisible(false);
+					else
+						window.source.setValue(Interface.getString("ct_label_effectappliedby") .. " " .. sSource);
+						window.source.setVisible(true);
+					end
+				end
+			</script>
+		</hs>
+	</template>
+	<template name="string_ct_effect_source">
+		<stringcontrol name="source">
+			<anchored height="20">
+				<right offset="-5" />
+				<top parent="label" anchor="bottom" />
+			</anchored>
+			<font>sheettextfaded</font>
+			<center />
+			<nodrag />
+			<readonly />
+			<invisible />
+			<script>
+				function onClickDown(button, x, y)
+					return true;
+				end
+				function onClickRelease(button, x, y)
+					if isVisible() then	setSource(""); end
+				end
+				function onDragStart(button, x, y, draginfo)
+					return window.onDragStart(button, x, y, draginfo);
+				end
+				function onDrop(x, y, draginfo)
+					return window.onDrop(x, y, draginfo);
+				end
+				function setSource(sNode)
+					if not sNode then sNode = ""; end
+					window.source_name.setValue(sNode);
+				end
+			</script>
+		</stringcontrol>
+	</template>
+	<template name="string_ct_effect_targets">
+		<string_ctentry_targets>
+			<anchored merge="delete" />
+			<anchored>
+				<left offset="5" />
+				<top parent="label" anchor="bottom" />
+				<right parent="label" />
+			</anchored>
+			<font>sheettextfaded</font>
+			<script>
+				function onClickDown(button, x, y)
+					return true;
+				end
+				function onClickRelease(button, x, y)
+					if isVisible() then
+						DB.deleteChildren(window.getDatabaseNode(), "targets");
+					end
+				end
+				function onDragStart(button, x, y, draginfo)
+					if window.onDragStart then
+						return window.onDragStart(button, x, y, draginfo);
+					end
+				end
+				function onDrop(x, y, draginfo)
+					if window.onDrop then
+						return window.onDrop(x, y, draginfo);
+					end
+				end
+			</script>
+		</string_ctentry_targets>
+	</template>
+	<template name="button_ct_effect_idelete">
+		<button_idelete name="idelete">
+			<anchored>
+				<top offset="2" />
+				<right parent="rightanchor" anchor="left" relation="relative" offset="-2" />
+			</anchored>
+			<tooltip textres="ct_tooltip_effectdelete" />
+			<invisible merge="delete" />
+		</button_idelete>
+	</template>
+	<template name="button_ct_effect_targetadd">
+		<buttoncontrol name="targeting_add_button">
+			<anchored to="rightanchor" width="20" height="20">
+				<top />
+				<right anchor="left" relation="relative" offset="-5" />
+			</anchored>
+			<icon normal="button_targeting" pressed="button_targeting_down" />
+			<tooltip textres="ct_tooltip_effectdragtarget" />
+			<script>
+				function onInit()
+					registerMenuItem(Interface.getString("ct_menu_targeting"), "goto", 4);
+					registerMenuItem(Interface.getString("ct_menu_targetingfriend"), "turn", 4, 3);
+					registerMenuItem(Interface.getString("ct_menu_targetingnonfriend"), "mask", 4, 5);
+				end
+				function onMenuSelection(selection, subselection)
+					if selection == 4 then
+						if subselection == 3 then
+							EffectManager.setEffectFactionTargets(window.getDatabaseNode(), window.windowlist.window.friendfoe.getStringValue());
+						elseif subselection == 5 then
+							EffectManager.setEffectFactionTargets(window.getDatabaseNode(), window.windowlist.window.friendfoe.getStringValue(), true);
+						end
+					end
+				end
+				function onDragStart(button, x, y, draginfo)
+					local nodeWin = window.getDatabaseNode();
+					if not nodeWin then
+						return false;
+					end
+					draginfo.setType("effect_targeting");
+					draginfo.setIcon("drag_targeting");
+					draginfo.setShortcutData(window.getClass(), nodeWin.getPath());
+					return true;
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+
+	<!-- Section - Active (2022-08-16) -->
+	<template name="button_ct_section_active">
+		<button_ct_section>
+			<tooltip textres="ct_tooltip_offense" />
+			<state icon="button_sword" merge="add" />
+			<state icon="button_sword_down" merge="add" />
+			<target>active</target>
+		</button_ct_section>
+	</template>
+
+	<!-- Section - Defense (2022-08-16) -->
+	<template name="button_ct_section_defense">
+		<button_ct_section>
+			<tooltip textres="ct_tooltip_defense" />
+			<state icon="button_shield" merge="add" />
+			<state icon="button_shield_down" merge="add" />
+			<target>defense</target>
+		</button_ct_section>
+	</template>
+</root>

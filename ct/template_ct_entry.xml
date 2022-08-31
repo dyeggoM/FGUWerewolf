@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<!-- General combat tracker entry (2022-08-16) -->
+	<template name="anchor_ct_entry_right">
+		<genericcontrol name="rightanchor">
+			<anchored width="0" height="0">
+				<top parent="active_spacer_top" anchor="bottom" offset="10" />
+				<right offset="-7" />
+			</anchored>
+			<invisible />
+		</genericcontrol>
+	</template>
+	<template name="button_ct_entry_idelete">
+		<button_idelete name="idelete">
+			<anchored to="rightanchor">
+				<top />
+				<right anchor="left" relation="relative" offset="-3" />
+			</anchored>
+		</button_idelete>
+	</template>
+
+	<!-- General combat tracker entry (Original) -->
+	<template name="string_ct">
+		<stringu>
+			<script file="common/scripts/string_crosslink.lua" />
+		</stringu>
+	</template>
+	<template name="number_ct_static">
+		<number_static>
+			<nodrag />
+			<hideonvalue value="0" />
+		</number_static>
+	</template>
+	<template name="number_ct_crosslink">
+		<basicnumber>
+			<script file="common/scripts/number_crosslink.lua" />
+		</basicnumber>
+	</template>
+	<template name="number_ct">
+		<basicnumber>
+			<anchored width="25" height="20" />
+			<script file="common/scripts/number_crosslink.lua" />
+		</basicnumber>
+	</template>
+	<template name="checkbox_ct_crosslink">
+		<button_checkbox>
+			<anchored width="10" height="20" />
+			<script file="common/scripts/button_crosslink.lua" />
+		</button_checkbox>
+	</template>
+	
+	<template name="spacer_ctentry_active_top">
+		<genericcontrol name="active_spacer_top">
+			<anchored position="insidetopleft" width="0" height="5" />
+			<invisible />
+		</genericcontrol>
+	</template>
+	<template name="spacer_ctentry_active_bottom">
+		<genericcontrol name="active_spacer_bottom">
+			<anchored width="0" height="5">
+				<top parent="active_spacer_top" anchor="bottom" relation="relative" />
+				<left />
+			</anchored>
+			<invisible />
+		</genericcontrol>
+	</template>
+	<template name="spacer_ctentry_middle">
+		<genericcontrol name="spacer">
+			<anchored width="0" height="7">
+				<top parent="active_spacer_top" anchor="bottom" relation="relative" />
+				<left />
+			</anchored>
+		</genericcontrol>
+	</template>
+
+	<template name="button_ctentry_active_base">
+		<buttonfield>
+			<anchored width="33" height="40">
+				<top parent="active_spacer_top" anchor="bottom" />
+				<left />
+			</anchored>
+			<state icon="ct_passive" />
+			<state icon="ct_active" />
+		</buttonfield>
+	</template>
+	<template name="token_ctentry_base">
+		<tokenfield>
+			<anchored width="25" height="25">
+				<top parent="active_spacer_top" anchor="bottom" offset="7" />
+				<left offset="33" />
+			</anchored>
+			<empty>token_empty</empty>
+		</tokenfield>
+	</template>
+
+	<!-- GM combat tracker entry (2022-08-16) -->
+	<template name="link_ct_entry">
+		<linkfield>
+			<anchored to="rightanchor" width="20" height="20">
+				<top />
+				<right anchor="left" relation="relative" offset="-3" />
+			</anchored>
+			<class>npc</class>
+			<selfonempty />
+			<readonly />
+			<script>
+				function onValueChanged()
+					window.onLinkChanged();
+				end
+			</script>
+		</linkfield>
+	</template>
+	<template name="button_ct_entry_isidentified">
+		<buttonfield>
+			<anchored to="token" position="righthigh" offset="-2,-4" width="12" height="12" />
+			<frame name="tempmodmini" offset="3,1,4,3" />
+			<state icon="record_unidentified" tooltipres="tooltip_nonid" />
+			<state icon="record_identified" tooltipres="tooltip_id" />
+			<invisible />
+			<gmeditonly />
+			<script>
+				function onValueChanged()
+					if window.onIDChanged then
+						window.onIDChanged();
+					end
+				end
+			</script>
+		</buttonfield>
+	</template>
+	<template name="button_ct_entry_tokenvis">
+		<buttonfield>
+			<anchored to="token" position="rightlow" offset="-2,-4" width="12" height="12" />
+			<frame name="tempmodmini" offset="3,1,4,3" />
+			<state icon="visibilityoff" tooltipres="ct_tooltip_shownpcon" />
+			<state icon="visibilityon" tooltipres="ct_tooltip_shownpcoff" />
+			<invisible/>
+			<script>
+				function onValueChanged()
+					window.onVisibilityChanged();
+				end
+			</script>
+		</buttonfield>
+	</template>
+	<template name="string_ct_entry_name">
+		<string_ct>
+			<anchored height="20">
+				<top parent="active_spacer_top" anchor="bottom"  relation="relative" offset="10" />
+				<left parent="token" anchor="right" offset="12" />
+				<right parent="rightanchor" anchor="left" relation="relative" offset="-10" />
+			</anchored>
+			<tabtarget next="initresult" />
+			<script file="ct/scripts/ct_name.lua" />
+		</string_ct>
+	</template>
+	<template name="string_ct_entry_name_nonid">
+		<string_ct_entry_name>
+			<empty textres="library_recordtype_empty_nonid_npc" />
+			<invisible />
+		</string_ct_entry_name>
+	</template>
+
+	<!-- GM combat tracker entry (Original) -->
+	<template name="button_ctentry_active">
+		<button_ctentry_active_base>
+			<script file="ct/scripts/ct_active.lua" />
+		</button_ctentry_active_base>
+	</template>
+	<template name="token_ctentry">
+		<token_ctentry_base>
+			<script file="ct/scripts/ct_token.lua" />
+		</token_ctentry_base>
+	</template>
+	<template name="button_ctentry_friendfoe">
+		<button_faction>
+			<anchored to="rightanchor">
+				<top />
+				<right anchor="left" relation="relative" offset="-5" />
+			</anchored>
+			<script>
+				function onValueChanged()
+					window.onFactionChanged();
+				end
+			</script>
+		</button_faction>
+	</template>
+	<template name="number_ctentry_initresult">
+		<number_ct_crosslink name="initresult">
+			<anchored to="rightanchor" width="30" height="20">
+				<top />
+				<right anchor="left" relation="relative" offset="-10" />
+			</anchored>
+			<hideonvalue>0</hideonvalue>
+			<tabtarget prev="nonid_name" />
+			<script>
+				function update()
+					window.windowlist.applySort();
+				end
+			</script>
+		</number_ct_crosslink>
+	</template>
+
+	<!-- Player combat tracker entry (Original) -->
+	<template name="button_clientct_active">
+		<button_ctentry_active_base>
+			<readonly />
+			<script>
+				function onValueChanged()
+					local bActive = (getValue() == 1);
+					
+					window.onActiveChanged(bActive);
+	
+					if bActive and OptionsManager.isOption("CMAT", "on") then
+						CombatManager.centerOnToken(window.getDatabaseNode(), false);
+					end
+				end
+			</script>
+		</button_ctentry_active_base>
+	</template>
+	<template name="token_clientct">
+		<token_ctentry_base>
+			<readonly />
+			<nodrag />
+		</token_ctentry_base>
+	</template>
+	<template name="hlink_clientct">
+		<hlink name="link">
+			<script>
+				function onValueChanged()
+					window.onIDChanged();
+				end
+			</script>
+		</hlink>
+	</template>
+	<template name="number_clientct_init">
+		<number_ct_static name="initresult">
+			<anchored to="rightanchor" width="30" height="20">
+				<top />
+				<right anchor="left" relation="relative" offset="-15" />
+			</anchored>
+			<script>
+				function onValueChanged()
+					window.windowlist.applySort();
+				end
+			</script>
+		</number_ct_static>
+	</template>
+	<template name="string_clientct_name">
+		<stringu name="name">
+			<anchored height="20">
+				<top parent="active_spacer_top" anchor="bottom" relation="relative" offset="10" />
+				<left parent="token" anchor="right" offset="5" />
+				<right parent="rightanchor" anchor="left" relation="relative" offset="-10" />
+			</anchored>
+			<readonly />
+		</stringu>
+	</template>
+</root>
