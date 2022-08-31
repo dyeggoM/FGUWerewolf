@@ -6,14 +6,162 @@
 -->
 
 <root>
-	<windowclass name="charsheet_abilities">
+	<windowclass name="charsheet_forms">
 		<sheetdata>
+			
+			<!-- Spirit Touchstone -->
+			<frame_char name="hishuframe">
+				<bounds>15,0,160,400</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>hishuframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Hishu</static>
+			</StringControl>
+			<StringControl>
+				<anchored>
+					<to>hishuframe</to>
+					<position>insidetop</position>
+					<offset>0,25</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>(Human)</static>
+			</StringControl>
+			<StringControl name="hishuSizeLabel">
+				<anchored>
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<offset>10,45</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size:</static>
+			</StringControl>
+			<StringField name="hishuSize">
+				<anchored>
+					<top>
+						<parent>hishuframe</parent>
+						<anchor>top</anchor>
+						<offset>45</offset>
+					</top>
+					<bottom>
+						<parent>hishuframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuframe</parent>
+						<anchor>left</anchor>
+						<offset>55</offset>
+					</left>
+					<right>
+						<parent>hishuframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<!-- <StringField name="hishu">
+				<anchored>
+					<top>
+						<parent>hishuframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>hishuframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>hishuframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>hishuframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField> -->
+
+
+
+			<!-- <frame_char name="spiritTouchstoneframe">
+				<bounds>15,0,160,55</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>spiritTouchstoneframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Spirit Touchstone</static>
+			</StringControl>
+			<StringField name="spiritTouchstone">
+				<anchored>
+					<top>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField> -->
+
+
+
+
+
+
+			<!-- 
 			<frame_char name="abilityframe">
 				<bounds>15,0,-29,-5</bounds>
 			</frame_char>
 			<label_frametop>
 				<anchored to="abilityframe" />
-				<static textres="char_label_abilities" />
+				<static textres="char_label_forms" />
 			</label_frametop>
 			<list_text name="abilities">
 				<anchored to="abilityframe">
@@ -47,14 +195,14 @@
 			<button_iadd name="abilities_iadd">
 				<anchored to="abilities" position="aboveright" offset="5,5" />
 				<target>abilities</target>
-			</button_iadd>
+			</button_iadd> -->
 		</sheetdata>
 	</windowclass>
 
 	<windowclass name="char_ability">
 		<margins control="0,0,0,2" />
 		<sheetdata>
-			<genericcontrol name="rightanchor">
+			<!-- <genericcontrol name="rightanchor">
 				<anchored height="0" width="0">
 					<top offset="2" />
 					<right />
@@ -80,7 +228,7 @@
 					<right anchor="left" relation="relative" offset="-5" />
 				</anchored>
 				<multilinespacing>20</multilinespacing>
-			</string_textlistitem>
+			</string_textlistitem> -->
 		</sheetdata>
 	</windowclass>	
 </root>

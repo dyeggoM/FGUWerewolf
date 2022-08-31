@@ -29,7 +29,7 @@
 	<icon name="tab_order" file="graphics/tabs/tab_order.png" />
 	
 	<icon name="tab_actions" file="graphics/tabs/tab_actions.png" />
-	<icon name="tab_abilities" file="graphics/tabs/tab_abilities.png" />
+	<icon name="tab_forms" file="graphics/tabs/tab_abilities.png" />
 	<icon name="tab_combat" file="graphics/tabs/tab_combat.png" />
 	<icon name="tab_other" file="graphics/tabs/tab_other.png" />
 	<icon name="tab_powers" file="graphics/tabs/tab_powers.png" />

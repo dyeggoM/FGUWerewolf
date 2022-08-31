@@ -7,59 +7,6 @@
 
 <root>
 	<windowclass name="charsheet_main">
-		<script name="MortalScript">
-			local GameLine = { 
-				Name= "Mortal",
-				FullName = "Mortal",
-				MoralityTitle = "Morality",
-				FactionTitle = "Faction",
-				GroupTitle = "Group Name",
-				CSLogo = "mortal_button",
-				FullLogo = nil,
-				Skills =
-				{ [1]  = {Name="Academics", Type="Mental", Untrained=-3},
-					[2]  = {Name="Computer", Type="Mental", Untrained=-3},
-					[3]  = {Name="Crafts", Type="Mental", Untrained=-3},
-					[4]  = {Name="Investigation", Type="Mental", Untrained=-3},
-					[5]  = {Name="Medicine", Type="Mental", Untrained=-3},
-					[6]  = {Name="Occult", Type="Mental", Untrained=-3},
-					[7]  = {Name="Politics", Type="Mental", Untrained=-3},
-					[8]  = {Name="Science", Type="Mental", Untrained=-3},
-					[9]  = {Name="Athletics", Type="Physical", Untrained=-1},
-					[10] = {Name="Brawl", Type="Physical", Untrained=-1},
-					[11] = {Name="Drive", Type="Physical", Untrained=-1},
-					[12] = {Name="Firearms", Type="Physical", Untrained=-1},
-					[13] = {Name="Larceny", Type="Physical", Untrained=-1},
-					[14] = {Name="Stealth", Type="Physical", Untrained=-1},
-					[15] = {Name="Survival", Type="Physical", Untrained=-1},
-					[16] = {Name="Weaponry", Type="Physical", Untrained=-1},
-					[17] = {Name="Animal Ken", Type="Social", Untrained=-1},
-					[18] = {Name="Empathy", Type="Social", Untrained=-1},
-					[19] = {Name="Expression", Type="Social", Untrained=-1},
-					[20] = {Name="Intimidation", Type="Social", Untrained=-1},
-					[21] = {Name="Persuasion", Type="Social", Untrained=-1},
-					[22] = {Name="Socialize", Type="Social", Untrained=-1},
-					[23] = {Name="Streetwise", Type="Social", Untrained=-1},
-					[24] = {Name="Subterfuge", Type="Social", Untrained=-1}
-				},
-				CharSheet =
-					{ Frame = "mortal_sheet",
-						TabControl = "charsheet_tabs",
-						Tabs =
-						{ [1] = {Name="main", Template="charsheet_main", Icon="tab_main"},
-						[2] = {Name="other", Template="charsheet_other", Icon="tab_other"},
-						[3] = {Name="notes", Template="charsheet_notes", Icon="tab_notes"},
-						Activate = 1
-						}
-					},
-				NPCSheet = nil,
-				CombatPanels = nil
-			};
-
-			function onInit()
-				LineManager.register(GameLine,true);
-			end
-		</script>
 		<script>
 			function onInit()
 				local linename = getDatabaseNode().createChild("gameline","string").getValue();
@@ -72,15 +19,35 @@
 
 		<margins control="0,0,0,2" />
 		<sheetdata>
+			<!-- Common information -->
+			<frame_char name="detailframe">
+				<bounds>15,0,580,45</bounds>
+			</frame_char>
+			<string_labeled name="auspice">
+				<anchored to="detailframe" position="insidetopleft" offset="15,10"  width="100" height="20" />
+				<labelres>char_label_auspice</labelres>
+			</string_labeled>
+			<string_labeled name="tribe">
+				<anchored to="auspice" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_tribe</labelres>
+			</string_labeled>
+			<string_labeled name="chronicle">
+				<anchored to="tribe" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_chronicle</labelres>
+			</string_labeled>
+			<string_labeled name="concept">
+				<anchored to="chronicle" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_concept</labelres>
+			</string_labeled>
+			<string_labeled name="lodge">
+				<anchored to="concept" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_lodge</labelres>
+			</string_labeled>
 		
 			<!-- ATTRIBUTES: Types -->
-			<genericcontrol name="attributesTypes">
-				<!-- <bounds>12,98,160,70</bounds> -->
-				<bounds>15,0,100,70</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="attributesTypes">
+				<bounds>15,45,100,70</bounds>
+			</frame_char>
 			<StringControl name="power">
 				<anchored>
 					<to>attributesTypes</to>
@@ -128,13 +95,9 @@
 			</StringControl>
 
 			<!-- ATTRIBUTES: Mental -->
-			<genericcontrol name="attributesMental">
-				<!-- <bounds>12,98,160,70</bounds> -->
-				<bounds>115,0,160,70</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="attributesMental">
+				<bounds>115,45,160,70</bounds>
+			</frame_char>
 			<StringControl name="intlabel">
 				<anchored>
 					<to>attributesMental</to>
@@ -254,13 +217,9 @@
 			</DotControl>
 
 			<!-- ATTRIBUTES: Physical -->
-			<genericcontrol name="attributesPhysical">
-				<!-- <bounds>172,98,160,70</bounds> -->
-				<bounds>275,0,160,70</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="attributesPhysical">
+				<bounds>275,45,160,70</bounds>
+			</frame_char>
 			<StringControl name="strlabel">
 				<anchored>
 					<to>attributesPhysical</to>
@@ -380,13 +339,9 @@
 			</DotControl>
 
 			<!-- ATTRIBUTES: Social -->
-			<genericcontrol name="attributesSocial">
-				<!-- <bounds>332,98,160,70</bounds> -->
-				<bounds>435,0,160,70</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="attributesSocial">
+				<bounds>435,45,160,70</bounds>
+			</frame_char>
 			<StringControl name="prelabel">
 				<anchored>
 					<to>attributesSocial</to>
@@ -504,12 +459,9 @@
 
 
 			<!-- SKILLS -->
-			<genericcontrol name="skillframe">
-				<bounds>15,80,260,430</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="skillframe">
+				<bounds>15,115,260,430</bounds>
+			</frame_char>
 			<windowlist name="skills">
 				<anchored>
 					<to>skillframe</to>
@@ -564,23 +516,78 @@
 				<skipempty/>
 			</windowlist>
 
+			<!-- Renown -->
+			<frame_char name="renownframe">
+				<bounds>15,545,260,110</bounds>
+			</frame_char>
+			<windowlist name="renown">
+				<anchored>
+					<to>renownframe</to>
+					<position>over</position>
+					<offset>-10,-8</offset>
+				</anchored>
+				<class>charsheet_skillitem</class>
+				<datasource>.renown</datasource>
+				<noscroll/>
+				<script>
+					function onInit()
+						local linename, gameline, renowntype;
+						local order = 1;
+						--[[ get the game line structure ]]
+						linename = window.getDatabaseNode().createChild("gameline","string").getValue();
+						if linename=="" then
+							linename = LineManager.getDefaultName();
+						end
+						gameline = LineManager.getLine(linename);
+						if not gameline then
+							return;
+						end
+						--[[ find/create the default renown ]]
+						for i,renown in ipairs(gameline.Renown) do
+							local name = string.gsub(string.lower(renown.Name),"%W","");
+							local node = getDatabaseNode().getChild(name);
+							--[[ check if we need a new header ]]
+							if renown.Type~=renowntype then
+								renowntype = renown.Type;
+								win = createWindowWithClass("charsheet_skillheader");
+								win.title.setValue(renowntype);
+								win.order.setValue(order);
+								order = order + 1;
+							end
+							--[[ process this renown ]]
+							if not node then
+								node = getDatabaseNode().createChild(name);
+								node.createChild("name","string").setValue(renown.Name);
+								node.createChild("type","string").setValue(renown.Type);
+								node.createChild("untrained","number").setValue(renown.Untrained);
+							end
+							node.createChild("order","number").setValue(order);
+							order = order + 1;
+						end
+						applySort(true);
+					end
+					
+					function onSortCompare(w1, w2)
+						return w1.order.getValue() &gt; w2.order.getValue();
+					end
+				</script>
+				<skipempty/>
+			</windowlist>
+
 
 			<!-- Merits -->
-			<genericcontrol name="meritframe">
-				<bounds>275,80,160,160</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="meritframe">
+				<bounds>275,115,160,255</bounds>
+			</frame_char>
 			<StringControl>
 				<anchored>
 					<to>meritframe</to>
 					<position>insidetop</position>
-					<offset>12,13</offset>
+					<offset>0,8</offset>
 				</anchored>
 				<center/>
 				<font>sheetlabel</font>
-				<static>Merits</static>
+				<static>Merits &amp; Flaws</static>
 			</StringControl>
 			<windowlist name="merits">
 				<allowcreate/>
@@ -628,66 +635,15 @@
 				</script>
 			</windowlist>
 
-			<!-- Flaws -->
-			<genericcontrol name="flawframe">
-				<bounds>275,240,160,100</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
-			<StringControl>
-				<anchored>
-					<to>flawframe</to>
-					<position>insidetop</position>
-					<offset>12,13</offset>
-				</anchored>
-				<center/>
-				<font>sheetlabel</font>
-				<static>Flaws</static>
-			</StringControl>
-			<StringField name="flaws">
-				<anchored>
-					<top>
-						<parent>flawframe</parent>
-						<anchor>top</anchor>
-						<offset>25</offset>
-					</top>
-					<bottom>
-						<parent>flawframe</parent>
-						<anchor>bottom</anchor>
-						<offset>-10</offset>
-					</bottom>
-					<left>
-						<parent>flawframe</parent>
-						<anchor>left</anchor>
-						<offset>15</offset>
-					</left>
-					<right>
-						<parent>flawframe</parent>
-						<anchor>right</anchor>
-						<offset>-15</offset>
-					</right>
-				</anchored>
-				<multilinespacing>20</multilinespacing>
-				<font>sheettext</font>
-				<frame>
-					<name>textline</name>
-					<offset>2,0,2,0</offset>
-				</frame>
-			</StringField>
-
 			<!-- Aspirations -->
-			<genericcontrol name="aspirationframe">
-				<bounds>275,340,160,80</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="aspirationframe">
+				<bounds>275,370,160,115</bounds>
+			</frame_char>
 			<StringControl>
 				<anchored>
 					<to>aspirationframe</to>
 					<position>insidetop</position>
-					<offset>12,13</offset>
+					<offset>0,8</offset>
 				</anchored>
 				<center/>
 				<font>sheetlabel</font>
@@ -725,17 +681,14 @@
 			</StringField>
 
 			<!-- Conditions -->
-			<genericcontrol name="conditionframe">
-				<bounds>275,420,160,80</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="conditionframe">
+				<bounds>275,485,160,115</bounds>
+			</frame_char>
 			<StringControl>
 				<anchored>
 					<to>conditionframe</to>
 					<position>insidetop</position>
-					<offset>12,13</offset>
+					<offset>0,8</offset>
 				</anchored>
 				<center/>
 				<font>sheetlabel</font>
@@ -772,14 +725,91 @@
 				</frame>
 			</StringField>
 
+			<!-- Beats -->
+			<frame_char name="beatsframe">
+				<bounds>275,600,80,55</bounds>
+			</frame_char>
+			<StringControl name="beatsLabel">
+				<anchored>
+					<to>beatsframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<static>Beats</static>
+				<font>sheetlabel</font>
+			</StringControl>
+			<CheckboxControl name="beats">
+				<anchored>
+					<top>
+						<parent>beatsLabel</parent>
+						<anchor>bottom</anchor>
+						<offset>5</offset>
+					</top>
+					<left>
+						<parent>beatsframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<size>
+						<width>120</width>
+						<height>25</height>
+					</size>
+				</anchored>
+				<dots>5</dots>
+				<rowcount>1</rowcount>
+			</CheckboxControl>
+
+			<!-- Experience -->
+			<frame_char name="experienceframe">
+				<bounds>355,600,80,55</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>experienceframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>XP</static>
+			</StringControl>
+			<StringField name="experience">
+				<anchored>
+					<top>
+						<parent>experienceframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>experienceframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>experienceframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>experienceframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
 
 			<!-- Health -->
-			<genericcontrol name="healthframe">
-				<bounds>435,80,160,60</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="healthframe">
+				<bounds>435,115,160,60</bounds>
+			</frame_char>
 			<StringControl name="healthLabel">
 				<anchored>
 					<to>healthframe</to>
@@ -811,12 +841,9 @@
 			</DotBoxControl>
 
 			<!-- Willpower -->
-			<genericcontrol name="willpowerframe">
-				<bounds>435,140,160,60</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="willpowerframe">
+				<bounds>435,175,160,60</bounds>
+			</frame_char>
 			<StringControl name="willpowerLabel">
 				<anchored>
 					<to>willpowerframe</to>
@@ -852,12 +879,9 @@
 			</DotBoxControl>
 
 			<!-- Primal Urge -->
-			<genericcontrol name="primalurgeframe">
-				<bounds>435,200,160,45</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="primalurgeframe">
+				<bounds>435,235,160,45</bounds>
+			</frame_char>
 			<StringControl name="primalurgeLabel">
 				<anchored>
 					<to>primalurgeframe</to>
@@ -889,12 +913,9 @@
 			</DotControl>
 
 			<!-- Essence -->
-			<genericcontrol name="essenceframe">
-				<bounds>435,245,160,55</bounds>
-				<frame>
-					<name>sheetgroup</name>
-				</frame>
-			</genericcontrol>
+			<frame_char name="essenceframe">
+				<bounds>435,280,160,60</bounds>
+			</frame_char>
 			<StringControl name="essenceLabel">
 				<anchored>
 					<to>essenceframe</to>
@@ -910,7 +931,7 @@
 					<top>
 						<parent>essenceLabel</parent>
 						<anchor>bottom</anchor>
-						<offset>1</offset>
+						<offset>5</offset>
 					</top>
 					<left>
 						<parent>essenceframe</parent>
@@ -926,13 +947,55 @@
 				<rowcount>2</rowcount>
 			</CheckboxControl>
 
-			<!-- Harmony -->
-			<genericcontrol name="harmonyframe">
-				<bounds>435,300,160,45</bounds>
+			<!-- Flesh Touchstone -->
+			<frame_char name="fleshTouchstoneframe">
+				<bounds>435,340,160,55</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>fleshTouchstoneframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Flesh Touchstone</static>
+			</StringControl>
+			<StringField name="fleshTouchstone">
+				<anchored>
+					<top>
+						<parent>fleshTouchstoneframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>fleshTouchstoneframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>fleshTouchstoneframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>fleshTouchstoneframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
 				<frame>
-					<name>sheetgroup</name>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
 				</frame>
-			</genericcontrol>
+			</StringField>
+
+			<!-- Harmony -->
+			<frame_char name="harmonyframe">
+				<bounds>435,395,160,50</bounds>
+			</frame_char>
 			<StringControl name="harmonyLabel">
 				<anchored>
 					<to>harmonyframe</to>
@@ -940,7 +1003,7 @@
 					<offset>0,8</offset>
 				</anchored>
 				<center/>
-				<static>Harmony</static>
+				<static>Harmony (Integrity)</static>
 				<font>sheetlabel</font>
 			</StringControl>
 			<DotControl name="harmony">
@@ -948,7 +1011,7 @@
 					<top>
 						<parent>harmonyLabel</parent>
 						<anchor>bottom</anchor>
-						<offset>1</offset>
+						<offset>5</offset>
 					</top>
 					<left>
 						<parent>harmonyframe</parent>
@@ -962,6 +1025,98 @@
 				</anchored>
 				<dots>10</dots>
 			</DotControl>
+
+			<!-- Spirit Touchstone -->
+			<frame_char name="spiritTouchstoneframe">
+				<bounds>435,445,160,55</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>spiritTouchstoneframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Spirit Touchstone</static>
+			</StringControl>
+			<StringField name="spiritTouchstone">
+				<anchored>
+					<top>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>spiritTouchstoneframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Kuruth Triggers -->
+			<frame_char name="kuruthTriggersframe">
+				<bounds>435,500,160,155</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>kuruthTriggersframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Kuruth Triggers</static>
+			</StringControl>
+			<StringField name="kuruthTriggers">
+				<anchored>
+					<top>
+						<parent>kuruthTriggersframe</parent>
+						<anchor>top</anchor>
+						<offset>25</offset>
+					</top>
+					<bottom>
+						<parent>kuruthTriggersframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>kuruthTriggersframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>kuruthTriggersframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+
 
 			<!-- <frame_char name="attributesframe">
 				<bounds>15,0,-29,-50</bounds>
@@ -1003,111 +1158,6 @@
 		</sheetdata>
 	</windowclass>
 
-	
-	<windowclass name="charsheet_skillitem">
-		<sizelimits>
-			<minimum>
-				<height>15</height>
-			</minimum>
-			<maximum>
-				<height>15</height>
-			</maximum>
-		</sizelimits>
-		<script>
-			function onDrag(button, x, y, dragdata)
-				dragdata.setType("number");
-				dragdata.setNumberData(rank.getValue());
-				dragdata.setDescription(name.getValue());
-				return true;
-			end
-
-			function onDoubleClick(...)
-				ModifierStack.addSlot(name.getValue(), rank.getValue());
-				return true;
-			end
-		</script>
-		<sheetdata>
-			<StringField name="name">
-				<anchored>
-					<left>
-						<anchor>left</anchor>
-					</left>
-					<top>
-						<anchor>top</anchor>
-						<offset>-3</offset>
-					</top>
-					<size>
-						<height>18</height>
-					</size>
-				</anchored>
-				<font>sheettext</font>
-				<script>
-					function onDrag(...)
-						return window.onDrag(...);
-					end
-
-					function onDoubleClick(...)
-						if super and super.onDoubleClick then
-						super.onDoubleClick(...);
-						end
-						return window.onDoubleClick(...);
-					end
-				</script>
-				<static/>
-			</StringField>
-			<DotControl name="rank">
-				<anchored>
-					<right>
-						<anchor>right</anchor>
-					</right>
-					<top>
-						<anchor>top</anchor>
-						<offset>2</offset>
-					</top>
-					<size>
-						<width>50</width>
-						<height>10</height>
-					</size>
-				</anchored>
-				<titlefield>name</titlefield>
-			</DotControl>
-			<StringField name="specialties">
-				<anchored>
-					<top>
-						<anchor>top</anchor>
-						<offset>-3</offset>
-					</top>
-					<left>
-						<parent>name</parent>
-						<anchor>right</anchor>
-						<offset>5</offset>
-					</left>
-					<right>
-						<parent>rank</parent>
-						<anchor>left</anchor>
-						<offset>-5</offset>
-					</right>
-					<size>
-						<height>18</height>
-					</size>
-				</anchored>
-				<font>sheettext</font>
-				<frame>
-					<name>textlinesmall</name>
-					<offset>0,-2,0,0</offset>
-				</frame>
-				<keyeditframe>
-					<name>shadelinesmall</name>
-					<offset>0,-2,0,0</offset>
-				</keyeditframe>
-			</StringField>
-			<!-- hidden fields -->
-			<numberfield name="order">
-				<bounds>0,0,0,0</bounds>
-				<invisible/>
-			</numberfield>
-		</sheetdata>
-	</windowclass>
 
 	<windowclass name="charsheet_skillheader">
 		<sizelimits>
@@ -1142,7 +1192,7 @@
 			</numbercontrol>
 		</sheetdata>
 	</windowclass>
-	
+
 	<windowclass name="charsheet_skillitem">
 		<sizelimits>
 			<minimum>
@@ -1247,7 +1297,7 @@
 			</numberfield>
 		</sheetdata>
 	</windowclass>
-	
+
 	<windowclass name="charsheet_moralityitem">
 		<sizelimits>
 			<minimum>

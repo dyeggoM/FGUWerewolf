@@ -122,7 +122,14 @@
         }
       },
       NPCSheet = nil,
-      CombatPanels = nil
+      CombatPanels = nil,
+      Renown =
+      { [1]  = {Name="Purity", Type="Renown"},
+        [2]  = {Name="Glory", Type="Renown"},
+        [3]  = {Name="Honor", Type="Renown"},
+        [4]  = {Name="Wisdom", Type="Renown"},
+        [5]  = {Name="Cunning", Type="Renown"},
+      },
     };
 
     function onInit()

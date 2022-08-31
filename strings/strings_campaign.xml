@@ -66,7 +66,7 @@
 	<string name="char_tooltip_inv_carried">Carried</string>
 	<string name="char_tooltip_inv_equipped">Equipped</string>
 	<string name="char_label_attributes">Attributes / Skills</string>
-	<string name="char_label_abilities">Abilities</string>
+	<string name="char_label_forms">Forms</string>
 	<string name="char_label_itemlocation">Location</string>
 	<string name="char_label_itemname">Name</string>
 	<string name="char_label_totalweight">Total weight carried</string>
@@ -77,6 +77,14 @@
 	<string name="char_menu_delete">Delete Character</string>
 	<string name="char_menu_ownerclear">Clear owner</string>
 	<string name="char_menu_ownergm">Take ownership (as %s)</string>
+
+	<string name="char_label_blood">Blood</string>
+	<string name="char_label_bone">Bone</string>
+	<string name="char_label_auspice">Auspice</string>
+	<string name="char_label_tribe">Tribe</string>
+	<string name="char_label_concept">Concept</string>
+	<string name="char_label_lodge">Lodge</string>
+	<string name="char_label_chronicle">Chronicle</string>
 
 	<!-- Pregenerated Characters -->
 	<string name="pregencharselect_window_title">Pregenerated Characters</string>
