@@ -717,4 +717,113 @@
 			<script file="common/scripts/template_dotcontrol.lua" />
 		</genericcontrol>
 	</template>
+	
+	<template name="textlistitemvalue">
+		<stringfield name="value">
+			<font>sheettext</font>
+			<multilinespacing>20</multilinespacing>
+			<frame>
+				<name>textline</name>
+			</frame>
+			<script>
+				function onEnter()
+					local new = window.windowlist.createWindow();
+					new[getName()].setFocus();
+				end
+					
+				function onNavigateDown()
+					local next = window.windowlist.getNextWindow(window);
+					if next then
+						next[getName()].setFocus();
+						next[getName()].setCursorPosition(1);
+						next[getName()].setSelectionPosition(1);
+					end
+				end
+				
+				function onNavigateUp()
+					local prev = window.windowlist.getPrevWindow(window);
+					if prev then
+						prev[getName()].setFocus();
+						prev[getName()].setCursorPosition(#prev[getName()].getValue()+1);
+						prev[getName()].setSelectionPosition(#prev[getName()].getValue()+1);
+					end
+				end
+				
+				function onNavigateRight()
+					if tabtarget and tabtarget[1] and tabtarget[1].next and tabtarget[1].next[1] then
+						local target = window[tabtarget[1].next[1]];
+
+						if type(target) == "stringcontrol" then
+							target.setFocus();
+							target.setCursorPosition(1);
+							target.setSelectionPosition(1);
+						end
+					end
+				end
+				
+				function onNavigateLeft()
+					if tabtarget and tabtarget[1] and tabtarget[1].prev and tabtarget[1].prev[1] then
+						local target = window[tabtarget[1].prev[1]];
+
+						if type(target) == "stringcontrol" then
+							target.setFocus();
+							target.setCursorPosition(#target.getValue()+1);
+							target.setSelectionPosition(#target.getValue()+1);
+						end
+					end
+				end
+				
+				function onDeleteUp()
+					if getValue() == "" and not nodelete then
+						local target = window.windowlist.getPrevWindow(window);
+						if target then
+							target[getName()].setFocus();
+							target[getName()].setCursorPosition(#target[getName()].getValue()+1);
+							target[getName()].setSelectionPosition(#target[getName()].getValue()+1);
+						end
+						
+						window.getDatabaseNode().delete();
+					end
+				end
+				
+				function onDeleteDown()
+					if getValue() == "" and not nodelete then
+						local target = window.windowlist.getNextWindow(window);
+						if target then
+							target[getName()].setFocus();
+							target[getName()].setCursorPosition(1);
+							target[getName()].setSelectionPosition(1);
+						end
+						
+						window.getDatabaseNode().delete();
+					end
+				end
+				
+				function onGainFocus()
+					window.setFrame("rowshade");
+				end
+				
+				function onLoseFocus()
+					window.setFrame(nil);
+				end
+			</script>
+		</stringfield>
+	</template>
+
+	
+	<template name="NumberField">
+		<numberfield>
+			<script file="common/scripts/template_NumberControl.lua"/>
+		</numberfield>
+	</template>
+	
+	<template name="checkbox">
+		<genericcontrol>
+			<stateicons>
+				<on>box_cross</on>
+				<off>box_empty</off>
+			</stateicons>
+			<script file="common/scripts/template_checkbox.lua" />
+		</genericcontrol>
+	</template>
 </root>
