@@ -340,6 +340,28 @@
 				</frame>
 			</StringField>
 
+			<!-- Hishu Information -->
+			<genericcontrol name="hishuInformationframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuInformationLabel">
+				<anchored>
+					<to>hishuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>Sheep's Clothing</static>
+			</StringControl>
+
 
 			<!-- DALU -->
 			<frame_char name="daluframe">
@@ -825,6 +847,65 @@
 				</frame>
 			</StringField>
 
+			<!-- dalu Information -->
+			<genericcontrol name="daluInformationframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluInformationLabel1">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-30</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth/Claws +0L
+				</static>
+			</StringControl>
+			<StringControl name="daluInformationLabel2">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-20</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Defense vs. Firearms
+				</static>
+			</StringControl>
+			<StringControl name="daluInformationLabel3">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Mild Lunacy
+				</static>
+			</StringControl>
+			<StringControl name="daluInformationLabel4">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Badass Motherfucker
+				</static>
+			</StringControl>
 			
 			<!-- GARU -->
 			<frame_char name="garuframe">
@@ -1360,6 +1441,102 @@
 					<offset>2,0,2,0</offset>
 				</frame>
 			</StringField>
+			
+			<!-- garu Information -->
+			<genericcontrol name="garuInformationframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuInformationLabel1">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-60</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth/Claws +2L
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel2">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-50</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					(Initiative +3)
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel3">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-40</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Defense vs. Firearms
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel4">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-30</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Full Lunacy
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel5">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-20</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Regeneration
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel6">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Rage
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel7">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Primal Fear
+				</static>
+			</StringControl>
 
 			<!-- URSHUL -->
 			<frame_char name="urshulframe">
@@ -1896,6 +2073,65 @@
 				</frame>
 			</StringField>
 
+			<!-- urshul Information -->
+			<genericcontrol name="urshulInformationframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulInformationLabel1">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-30</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth +2L/Claws +1L
+				</static>
+			</StringControl>
+			<StringControl name="urshulInformationLabel2">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-20</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Defense vs Firearms
+				</static>
+			</StringControl>
+			<StringControl name="urshulInformationLabel3">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Moderate Lunacy
+				</static>
+			</StringControl>
+			<StringControl name="urshulInformationLabel4">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Weaken the Prey
+				</static>
+			</StringControl>
 
 			<!-- URHAN -->
 			<frame_char name="urhanframe">
@@ -2431,6 +2667,43 @@
 					<offset>2,0,2,0</offset>
 				</frame>
 			</StringField>
+
+			<!-- urhan Information -->
+			<genericcontrol name="urhanInformationframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanInformationLabel1">
+				<anchored>
+					<to>urhanInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth +1L
+				</static>
+			</StringControl>
+			<StringControl name="urhanInformationLabel2">
+				<anchored>
+					<to>urhanInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Chase Down
+				</static>
+			</StringControl>
+
 
 		</sheetdata>
 	</windowclass>
