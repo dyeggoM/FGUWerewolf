@@ -1,0 +1,2711 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="charsheet_forms">
+		<sheetdata>
+
+			<!-- HISHU -->
+			<frame_char name="hishuframe">
+				<bounds>15,0,160,400</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>hishuframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Hishu</static>
+			</StringControl>
+			<StringControl>
+				<anchored>
+					<to>hishuframe</to>
+					<position>insidetop</position>
+					<offset>0,25</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>(Human)</static>
+			</StringControl>
+
+			<!-- Hishu Size -->
+			<genericcontrol name="hishuSizeframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<top offset="45" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuSizeLabel">
+				<anchored>
+					<to>hishuSizeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size:</static>
+			</StringControl>
+			<StringField name="hishuSize">
+				<anchored>
+					<top>
+						<parent>hishuSizeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>hishuSizeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuSizeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>hishuSizeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Hishu Defense -->
+			<genericcontrol name="hishuDefenseframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<top offset="70" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuDefenseLabel">
+				<anchored>
+					<to>hishuDefenseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Defense:</static>
+			</StringControl>
+			<StringField name="hishuDefense">
+				<anchored>
+					<top>
+						<parent>hishuDefenseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>hishuDefenseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuDefenseframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>hishuDefenseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Hishu Initiative -->
+			<genericcontrol name="hishuInitiativeframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<top offset="95" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuInitiativeLabel">
+				<anchored>
+					<to>hishuInitiativeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Initiative:</static>
+			</StringControl>
+			<StringField name="hishuInitiative">
+				<anchored>
+					<top>
+						<parent>hishuInitiativeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>hishuInitiativeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuInitiativeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>hishuInitiativeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Hishu Speed -->
+			<genericcontrol name="hishuSpeedframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<top offset="120" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuSpeedLabel">
+				<anchored>
+					<to>hishuSpeedframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Speed:</static>
+			</StringControl>
+			<StringField name="hishuSpeed">
+				<anchored>
+					<top>
+						<parent>hishuSpeedframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>hishuSpeedframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuSpeedframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>hishuSpeedframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Hishu Armor -->
+			<genericcontrol name="hishuArmorframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<top offset="145" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuArmorLabel">
+				<anchored>
+					<to>hishuArmorframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Armor:</static>
+			</StringControl>
+			<StringField name="hishuArmor">
+				<anchored>
+					<top>
+						<parent>hishuArmorframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>hishuArmorframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuArmorframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>hishuArmorframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Hishu Perception -->
+			<genericcontrol name="hishuPerceptionframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidetopleft</position>
+					<top offset="170" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuPerceptionLabel">
+				<anchored>
+					<to>hishuPerceptionframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Perception(+1):</static>
+			</StringControl>
+			<StringField name="hishuPerception">
+				<anchored>
+					<top>
+						<parent>hishuPerceptionframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>hishuPerceptionframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>hishuPerceptionframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>hishuPerceptionframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- Hishu Information -->
+			<genericcontrol name="hishuInformationframe">
+				<anchored height="25" width="160">
+					<to>hishuframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="hishuInformationLabel">
+				<anchored>
+					<to>hishuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>Sheep's Clothing</static>
+			</StringControl>
+
+
+			<!-- DALU -->
+			<frame_char name="daluframe">
+				<bounds>175,0,160,400</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>daluframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Dalu</static>
+			</StringControl>
+			<StringControl>
+				<anchored>
+					<to>daluframe</to>
+					<position>insidetop</position>
+					<offset>0,25</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>(Near-Human)</static>
+			</StringControl>
+
+			<!-- dalu Size -->
+			<genericcontrol name="daluSizeframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="45" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluSizeLabel">
+				<anchored>
+					<to>daluSizeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size(+1):</static>
+			</StringControl>
+			<StringField name="daluSize">
+				<anchored>
+					<top>
+						<parent>daluSizeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluSizeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluSizeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluSizeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Defense -->
+			<genericcontrol name="daluDefenseframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="70" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluDefenseLabel">
+				<anchored>
+					<to>daluDefenseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Defense:</static>
+			</StringControl>
+			<StringField name="daluDefense">
+				<anchored>
+					<top>
+						<parent>daluDefenseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluDefenseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluDefenseframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluDefenseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Initiative -->
+			<genericcontrol name="daluInitiativeframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="95" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluInitiativeLabel">
+				<anchored>
+					<to>daluInitiativeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Initiative:</static>
+			</StringControl>
+			<StringField name="daluInitiative">
+				<anchored>
+					<top>
+						<parent>daluInitiativeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluInitiativeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluInitiativeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluInitiativeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Speed -->
+			<genericcontrol name="daluSpeedframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="120" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluSpeedLabel">
+				<anchored>
+					<to>daluSpeedframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Speed(+1):</static>
+			</StringControl>
+			<StringField name="daluSpeed">
+				<anchored>
+					<top>
+						<parent>daluSpeedframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluSpeedframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluSpeedframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluSpeedframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Armor -->
+			<genericcontrol name="daluArmorframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="145" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluArmorLabel">
+				<anchored>
+					<to>daluArmorframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Armor:</static>
+			</StringControl>
+			<StringField name="daluArmor">
+				<anchored>
+					<top>
+						<parent>daluArmorframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluArmorframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluArmorframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluArmorframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Perception -->
+			<genericcontrol name="daluPerceptionframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="170" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluPerceptionLabel">
+				<anchored>
+					<to>daluPerceptionframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Perception(+2):</static>
+			</StringControl>
+			<StringField name="daluPerception">
+				<anchored>
+					<top>
+						<parent>daluPerceptionframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluPerceptionframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluPerceptionframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluPerceptionframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Strength -->
+			<genericcontrol name="daluStrengthframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="205" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluStrengthLabel">
+				<anchored>
+					<to>daluStrengthframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Strength(+1):</static>
+			</StringControl>
+			<StringField name="daluStrength">
+				<anchored>
+					<top>
+						<parent>daluStrengthframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluStrengthframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluStrengthframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluStrengthframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Stamina -->
+			<genericcontrol name="daluStaminaframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="230" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluStaminaLabel">
+				<anchored>
+					<to>daluStaminaframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Stamina(+1):</static>
+			</StringControl>
+			<StringField name="daluStamina">
+				<anchored>
+					<top>
+						<parent>daluStaminaframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluStaminaframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluStaminaframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluStaminaframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Manipulation -->
+			<genericcontrol name="daluManipulationframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidetopleft</position>
+					<top offset="255" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluManipulationLabel">
+				<anchored>
+					<to>daluManipulationframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Manipulation(-1):</static>
+			</StringControl>
+			<StringField name="daluManipulation">
+				<anchored>
+					<top>
+						<parent>daluManipulationframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>daluManipulationframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>daluManipulationframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>daluManipulationframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- dalu Information -->
+			<genericcontrol name="daluInformationframe">
+				<anchored height="25" width="160">
+					<to>daluframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="daluInformationLabel1">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-30</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth/Claws +0L
+				</static>
+			</StringControl>
+			<StringControl name="daluInformationLabel2">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-20</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Defense vs. Firearms
+				</static>
+			</StringControl>
+			<StringControl name="daluInformationLabel3">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Mild Lunacy
+				</static>
+			</StringControl>
+			<StringControl name="daluInformationLabel4">
+				<anchored>
+					<to>daluInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Badass Motherfucker
+				</static>
+			</StringControl>
+			
+			<!-- GARU -->
+			<frame_char name="garuframe">
+				<bounds>335,0,160,400</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>garuframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Garu</static>
+			</StringControl>
+			<StringControl>
+				<anchored>
+					<to>garuframe</to>
+					<position>insidetop</position>
+					<offset>0,25</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>(Wolf-Man)</static>
+			</StringControl>
+
+			<!-- garu Size -->
+			<genericcontrol name="garuSizeframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="45" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuSizeLabel">
+				<anchored>
+					<to>garuSizeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size(+2):</static>
+			</StringControl>
+			<StringField name="garuSize">
+				<anchored>
+					<top>
+						<parent>garuSizeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuSizeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuSizeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuSizeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Defense -->
+			<genericcontrol name="garuDefenseframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="70" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuDefenseLabel">
+				<anchored>
+					<to>garuDefenseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Defense:</static>
+			</StringControl>
+			<StringField name="garuDefense">
+				<anchored>
+					<top>
+						<parent>garuDefenseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuDefenseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuDefenseframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuDefenseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Initiative -->
+			<genericcontrol name="garuInitiativeframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="95" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuInitiativeLabel">
+				<anchored>
+					<to>garuInitiativeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Initiative(+1):</static>
+			</StringControl>
+			<StringField name="garuInitiative">
+				<anchored>
+					<top>
+						<parent>garuInitiativeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuInitiativeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuInitiativeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuInitiativeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Speed -->
+			<genericcontrol name="garuSpeedframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="120" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuSpeedLabel">
+				<anchored>
+					<to>garuSpeedframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Speed(+4):</static>
+			</StringControl>
+			<StringField name="garuSpeed">
+				<anchored>
+					<top>
+						<parent>garuSpeedframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuSpeedframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuSpeedframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuSpeedframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Armor -->
+			<!-- <genericcontrol name="garuArmorframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="145" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuArmorLabel">
+				<anchored>
+					<to>garuArmorframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Armor:</static>
+			</StringControl>
+			<StringField name="garuArmor">
+				<anchored>
+					<top>
+						<parent>garuArmorframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuArmorframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuArmorframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuArmorframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField> -->
+
+			<!-- garu Perception -->
+			<genericcontrol name="garuPerceptionframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="170" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuPerceptionLabel">
+				<anchored>
+					<to>garuPerceptionframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Perception(+3):</static>
+			</StringControl>
+			<StringField name="garuPerception">
+				<anchored>
+					<top>
+						<parent>garuPerceptionframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuPerceptionframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuPerceptionframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuPerceptionframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Strength -->
+			<genericcontrol name="garuStrengthframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="205" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuStrengthLabel">
+				<anchored>
+					<to>garuStrengthframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Strength(+3):</static>
+			</StringControl>
+			<StringField name="garuStrength">
+				<anchored>
+					<top>
+						<parent>garuStrengthframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuStrengthframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuStrengthframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuStrengthframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Stamina -->
+			<genericcontrol name="garuStaminaframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="230" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuStaminaLabel">
+				<anchored>
+					<to>garuStaminaframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Stamina(+2):</static>
+			</StringControl>
+			<StringField name="garuStamina">
+				<anchored>
+					<top>
+						<parent>garuStaminaframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuStaminaframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuStaminaframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuStaminaframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- garu Manipulation -->
+			<!-- <genericcontrol name="garuManipulationframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="255" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuManipulationLabel">
+				<anchored>
+					<to>garuManipulationframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Manipulation(-1):</static>
+			</StringControl>
+			<StringField name="garuManipulation">
+				<anchored>
+					<top>
+						<parent>garuManipulationframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuManipulationframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuManipulationframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuManipulationframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField> -->
+
+			<!-- garu Dexterity -->
+			<genericcontrol name="garuDexterityframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidetopleft</position>
+					<top offset="280" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuDexterityLabel">
+				<anchored>
+					<to>garuDexterityframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Dexterity(+1):</static>
+			</StringControl>
+			<StringField name="garuDexterity">
+				<anchored>
+					<top>
+						<parent>garuDexterityframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>garuDexterityframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>garuDexterityframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>garuDexterityframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			
+			<!-- garu Information -->
+			<genericcontrol name="garuInformationframe">
+				<anchored height="25" width="160">
+					<to>garuframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="garuInformationLabel1">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-60</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth/Claws +2L
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel2">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-50</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					(Initiative +3)
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel3">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-40</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Defense vs. Firearms
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel4">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-30</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Full Lunacy
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel5">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-20</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Regeneration
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel6">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Rage
+				</static>
+			</StringControl>
+			<StringControl name="garuInformationLabel7">
+				<anchored>
+					<to>garuInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Primal Fear
+				</static>
+			</StringControl>
+
+			<!-- URSHUL -->
+			<frame_char name="urshulframe">
+				<bounds>495,0,160,400</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>urshulframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Urshul</static>
+			</StringControl>
+			<StringControl>
+				<anchored>
+					<to>urshulframe</to>
+					<position>insidetop</position>
+					<offset>0,25</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>(Near-Wolf)</static>
+			</StringControl>
+
+			<!-- urshul Size -->
+			<genericcontrol name="urshulSizeframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="45" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulSizeLabel">
+				<anchored>
+					<to>urshulSizeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size(+1):</static>
+			</StringControl>
+			<StringField name="urshulSize">
+				<anchored>
+					<top>
+						<parent>urshulSizeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulSizeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulSizeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulSizeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Defense -->
+			<genericcontrol name="urshulDefenseframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="70" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulDefenseLabel">
+				<anchored>
+					<to>urshulDefenseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Defense:</static>
+			</StringControl>
+			<StringField name="urshulDefense">
+				<anchored>
+					<top>
+						<parent>urshulDefenseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulDefenseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulDefenseframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulDefenseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Initiative -->
+			<genericcontrol name="urshulInitiativeframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="95" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulInitiativeLabel">
+				<anchored>
+					<to>urshulInitiativeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Initiative(+2):</static>
+			</StringControl>
+			<StringField name="urshulInitiative">
+				<anchored>
+					<top>
+						<parent>urshulInitiativeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulInitiativeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulInitiativeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulInitiativeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Speed -->
+			<genericcontrol name="urshulSpeedframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="120" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulSpeedLabel">
+				<anchored>
+					<to>urshulSpeedframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Speed(+7):</static>
+			</StringControl>
+			<StringField name="urshulSpeed">
+				<anchored>
+					<top>
+						<parent>urshulSpeedframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulSpeedframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulSpeedframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulSpeedframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Armor -->
+			<genericcontrol name="urshulArmorframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="145" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulArmorLabel">
+				<anchored>
+					<to>urshulArmorframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Armor:</static>
+			</StringControl>
+			<StringField name="urshulArmor">
+				<anchored>
+					<top>
+						<parent>urshulArmorframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulArmorframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulArmorframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulArmorframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Perception -->
+			<genericcontrol name="urshulPerceptionframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="170" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulPerceptionLabel">
+				<anchored>
+					<to>urshulPerceptionframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Perception(+3):</static>
+			</StringControl>
+			<StringField name="urshulPerception">
+				<anchored>
+					<top>
+						<parent>urshulPerceptionframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulPerceptionframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulPerceptionframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulPerceptionframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Strength -->
+			<genericcontrol name="urshulStrengthframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="205" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulStrengthLabel">
+				<anchored>
+					<to>urshulStrengthframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Strength(+2):</static>
+			</StringControl>
+			<StringField name="urshulStrength">
+				<anchored>
+					<top>
+						<parent>urshulStrengthframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulStrengthframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulStrengthframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulStrengthframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Stamina -->
+			<genericcontrol name="urshulStaminaframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="230" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulStaminaLabel">
+				<anchored>
+					<to>urshulStaminaframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Stamina(+2):</static>
+			</StringControl>
+			<StringField name="urshulStamina">
+				<anchored>
+					<top>
+						<parent>urshulStaminaframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulStaminaframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulStaminaframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulStaminaframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Manipulation -->
+			<genericcontrol name="urshulManipulationframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="255" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulManipulationLabel">
+				<anchored>
+					<to>urshulManipulationframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Manipulation(-1):</static>
+			</StringControl>
+			<StringField name="urshulManipulation">
+				<anchored>
+					<top>
+						<parent>urshulManipulationframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulManipulationframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulManipulationframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulManipulationframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Dexterity -->
+			<genericcontrol name="urshulDexterityframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidetopleft</position>
+					<top offset="280" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulDexterityLabel">
+				<anchored>
+					<to>urshulDexterityframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Dexterity(+2):</static>
+			</StringControl>
+			<StringField name="urshulDexterity">
+				<anchored>
+					<top>
+						<parent>urshulDexterityframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urshulDexterityframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urshulDexterityframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urshulDexterityframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urshul Information -->
+			<genericcontrol name="urshulInformationframe">
+				<anchored height="25" width="160">
+					<to>urshulframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urshulInformationLabel1">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-30</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth +2L/Claws +1L
+				</static>
+			</StringControl>
+			<StringControl name="urshulInformationLabel2">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-20</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Defense vs Firearms
+				</static>
+			</StringControl>
+			<StringControl name="urshulInformationLabel3">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Moderate Lunacy
+				</static>
+			</StringControl>
+			<StringControl name="urshulInformationLabel4">
+				<anchored>
+					<to>urshulInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Weaken the Prey
+				</static>
+			</StringControl>
+
+			<!-- URHAN -->
+			<frame_char name="urhanframe">
+				<bounds>655,0,160,400</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>urhanframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Urhan</static>
+			</StringControl>
+			<StringControl>
+				<anchored>
+					<to>urhanframe</to>
+					<position>insidetop</position>
+					<offset>0,25</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>(Wolf)</static>
+			</StringControl>
+
+			<!-- urhan Size -->
+			<genericcontrol name="urhanSizeframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="45" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanSizeLabel">
+				<anchored>
+					<to>urhanSizeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size(-1):</static>
+			</StringControl>
+			<StringField name="urhanSize">
+				<anchored>
+					<top>
+						<parent>urhanSizeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanSizeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanSizeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanSizeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Defense -->
+			<genericcontrol name="urhanDefenseframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="70" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanDefenseLabel">
+				<anchored>
+					<to>urhanDefenseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Defense:</static>
+			</StringControl>
+			<StringField name="urhanDefense">
+				<anchored>
+					<top>
+						<parent>urhanDefenseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanDefenseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanDefenseframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanDefenseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Initiative -->
+			<genericcontrol name="urhanInitiativeframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="95" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanInitiativeLabel">
+				<anchored>
+					<to>urhanInitiativeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Initiative(+2):</static>
+			</StringControl>
+			<StringField name="urhanInitiative">
+				<anchored>
+					<top>
+						<parent>urhanInitiativeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanInitiativeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanInitiativeframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanInitiativeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Speed -->
+			<genericcontrol name="urhanSpeedframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="120" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanSpeedLabel">
+				<anchored>
+					<to>urhanSpeedframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Speed(+5):</static>
+			</StringControl>
+			<StringField name="urhanSpeed">
+				<anchored>
+					<top>
+						<parent>urhanSpeedframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanSpeedframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanSpeedframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanSpeedframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Armor -->
+			<genericcontrol name="urhanArmorframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="145" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanArmorLabel">
+				<anchored>
+					<to>urhanArmorframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Armor:</static>
+			</StringControl>
+			<StringField name="urhanArmor">
+				<anchored>
+					<top>
+						<parent>urhanArmorframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanArmorframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanArmorframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanArmorframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Perception -->
+			<genericcontrol name="urhanPerceptionframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="170" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanPerceptionLabel">
+				<anchored>
+					<to>urhanPerceptionframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Perception(+4):</static>
+			</StringControl>
+			<StringField name="urhanPerception">
+				<anchored>
+					<top>
+						<parent>urhanPerceptionframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanPerceptionframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanPerceptionframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanPerceptionframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Strength -->
+			<!-- <genericcontrol name="urhanStrengthframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="205" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanStrengthLabel">
+				<anchored>
+					<to>urhanStrengthframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Strength(+3):</static>
+			</StringControl>
+			<StringField name="urhanStrength">
+				<anchored>
+					<top>
+						<parent>urhanStrengthframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanStrengthframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanStrengthframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanStrengthframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField> -->
+
+			<!-- urhan Stamina -->
+			<genericcontrol name="urhanStaminaframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="230" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanStaminaLabel">
+				<anchored>
+					<to>urhanStaminaframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Stamina(+1):</static>
+			</StringControl>
+			<StringField name="urhanStamina">
+				<anchored>
+					<top>
+						<parent>urhanStaminaframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanStaminaframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanStaminaframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanStaminaframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Manipulation -->
+			<genericcontrol name="urhanManipulationframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="255" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanManipulationLabel">
+				<anchored>
+					<to>urhanManipulationframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Manipulation(-1):</static>
+			</StringControl>
+			<StringField name="urhanManipulation">
+				<anchored>
+					<top>
+						<parent>urhanManipulationframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanManipulationframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanManipulationframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanManipulationframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Dexterity -->
+			<genericcontrol name="urhanDexterityframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidetopleft</position>
+					<top offset="280" />
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanDexterityLabel">
+				<anchored>
+					<to>urhanDexterityframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Dexterity(+2):</static>
+			</StringControl>
+			<StringField name="urhanDexterity">
+				<anchored>
+					<top>
+						<parent>urhanDexterityframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>urhanDexterityframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>urhanDexterityframe</parent>
+						<anchor>left</anchor>
+						<offset>85</offset>
+					</left>
+					<right>
+						<parent>urhanDexterityframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- urhan Information -->
+			<genericcontrol name="urhanInformationframe">
+				<anchored height="25" width="160">
+					<to>urhanframe</to>
+					<position>insidebottom</position>
+					<!-- <top offset="170" /> -->
+					<bottom offset="0"/>
+					<left offset="10" />
+					<right offset="-10" />
+				</anchored>
+			</genericcontrol>
+			<StringControl name="urhanInformationLabel1">
+				<anchored>
+					<to>urhanInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,-10</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Teeth +1L
+				</static>
+			</StringControl>
+			<StringControl name="urhanInformationLabel2">
+				<anchored>
+					<to>urhanInformationframe</to>
+					<position>insidetop</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelinline</font>
+				<static>
+					Chase Down
+				</static>
+			</StringControl>
+
+
+		</sheetdata>
+	</windowclass>
+
+</root>

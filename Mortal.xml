@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- This file is provided under the Open Game License version 1.0a
+     For more information on OGL and related issues, see 
+       http://www.wizards.com/d20
+    
+     All producers of work derived from this definition are adviced to
+     familiarize themselves with the above license, and to take special
+     care in providing the definition of Product Identity (as specified
+     by the OGL) in their products.
+    
+     Copyright 2009 SmiteWorks Ltd.
+  -->
+
+<root version="2.0">
+  <!-- icons -->
+  <icon name="mortal_button" file="graphics/icons/mortal_button.png" />
+
+  <!-- frames -->
+  <!-- <framedef name="mortal_sheet">
+    <bitmap file="graphics/frames/mortal_sheet.png" />
+    <topleft rect="0,0,22,22" />
+    <top rect="22,0,481,22" />
+    <topright rect="503,0,22,22" />
+    <left rect="0,22,22,567" />
+    <middle rect="22,22,481,567" />
+    <right rect="503,22,22,567" />
+    <bottomleft rect="0,589,22,22" />
+    <bottom rect="22,589,481,22" />
+    <bottomright rect="503,589,22,22" />
+  </framedef> -->
+
+  <!-- window classes -->
+	<includefile source="campaign/record_char.xml" />
+	<includefile source="campaign/record_char_main.xml" />
+	<includefile source="campaign/record_char_abilities.xml" />
+	<includefile source="campaign/record_char_inventory.xml" />
+	<includefile source="campaign/record_char_notes.xml" />
+	<includefile source="campaign/record_ability.xml" />
+  
+  <!-- charsheet templates -->
+  <template name="charsheet_main">
+    <subwindow>
+      <bounds>0,0,-23,-1</bounds>
+      <class>charsheet_main</class>
+    </subwindow>
+  </template>
+  <template name="charsheet_other">
+    <subwindow>
+      <bounds>0,0,-23,-1</bounds>
+      <class>charsheet_other</class>
+    </subwindow>
+  </template>
+  <template name="charsheet_notes">
+    <subwindow>
+      <bounds>0,0,-23,-1</bounds>
+      <class>charsheet_notes</class>
+    </subwindow>
+  </template>
+  <template name="charsheet_tabs">
+    <tabcontrol name="tabs">
+      <anchored>
+        <left>
+          <anchor>right</anchor>
+          <offset>-22</offset>
+        </left>
+        <top>
+          <anchor>top</anchor>
+          <offset>50</offset>
+        </top>
+        <size>
+          <width>18</width>
+          <height>491</height>
+        </size>
+      </anchored>
+    </tabcontrol>
+  </template>
+
+  <script name="MortalScript">
+    local GameLine =
+    { Name= "Mortal",
+      FullName = "Mortal",
+      MoralityTitle = "Morality",
+      FactionTitle = "Faction",
+      GroupTitle = "Group Name",
+      CSLogo = "mortal_button",
+      FullLogo = nil,
+      Skills =
+      { [1]  = {Name="Academics", Type="Mental", Untrained=-3},
+        [2]  = {Name="Computer", Type="Mental", Untrained=-3},
+        [3]  = {Name="Crafts", Type="Mental", Untrained=-3},
+        [4]  = {Name="Investigation", Type="Mental", Untrained=-3},
+        [5]  = {Name="Medicine", Type="Mental", Untrained=-3},
+        [6]  = {Name="Occult", Type="Mental", Untrained=-3},
+        [7]  = {Name="Politics", Type="Mental", Untrained=-3},
+        [8]  = {Name="Science", Type="Mental", Untrained=-3},
+        [9]  = {Name="Athletics", Type="Physical", Untrained=-1},
+        [10] = {Name="Brawl", Type="Physical", Untrained=-1},
+        [11] = {Name="Drive", Type="Physical", Untrained=-1},
+        [12] = {Name="Firearms", Type="Physical", Untrained=-1},
+        [13] = {Name="Larceny", Type="Physical", Untrained=-1},
+        [14] = {Name="Stealth", Type="Physical", Untrained=-1},
+        [15] = {Name="Survival", Type="Physical", Untrained=-1},
+        [16] = {Name="Weaponry", Type="Physical", Untrained=-1},
+        [17] = {Name="Animal Ken", Type="Social", Untrained=-1},
+        [18] = {Name="Empathy", Type="Social", Untrained=-1},
+        [19] = {Name="Expression", Type="Social", Untrained=-1},
+        [20] = {Name="Intimidation", Type="Social", Untrained=-1},
+        [21] = {Name="Persuasion", Type="Social", Untrained=-1},
+        [22] = {Name="Socialize", Type="Social", Untrained=-1},
+        [23] = {Name="Streetwise", Type="Social", Untrained=-1},
+        [24] = {Name="Subterfuge", Type="Social", Untrained=-1}
+      },
+      CharSheet =
+      { Frame = "mortal_sheet",
+        TabControl = "charsheet_tabs",
+        Tabs =
+        { [1] = {Name="main", Template="charsheet_main", Icon="tab_main"},
+          [2] = {Name="other", Template="charsheet_other", Icon="tab_other"},
+          [3] = {Name="notes", Template="charsheet_notes", Icon="tab_notes"},
+          Activate = 1
+        }
+      },
+      NPCSheet = nil,
+      CombatPanels = nil,
+      Renown =
+      { [1]  = {Name="Purity", Type="Renown"},
+        [2]  = {Name="Glory", Type="Renown"},
+        [3]  = {Name="Honor", Type="Renown"},
+        [4]  = {Name="Wisdom", Type="Renown"},
+        [5]  = {Name="Cunning", Type="Renown"},
+      },
+    };
+
+    function onInit()
+      LineManager.register(GameLine,true);
+    end
+  </script>
+</root>

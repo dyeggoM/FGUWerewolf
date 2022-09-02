@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<!-- General combat tracker window (Original) -->
+	<windowclass name="combattracker_client">
+		<frame>ctbox</frame>
+		<placement>
+			<size width="500" height="500" />
+		</placement>
+		<sizelimits>
+			<minimum width="400" height="400" />
+			<dynamic />
+		</sizelimits>
+		<softclose />
+		<script>
+			function onInit()
+				OptionsManager.registerCallback("CTSI", updateShowOrder);
+				updateShowOrder();
+			end
+			
+			function onClose()
+				OptionsManager.unregisterCallback("CTSI", updateShowOrder);
+			end
+			
+			function updateShowOrder()
+				local bShowInit = not OptionsManager.isOption("CTSI", "off");
+				label_init.setVisible(bShowInit);
+			end
+		</script>
+		<sheetdata>
+			<windowtitlebar name="title">
+				<resource>ct_window_title</resource>
+			</windowtitlebar>
+			<anchor_title_ctbox name="contentanchor" />
+
+			<anchor_ctbox_client_header />
+			<anchor_ct_label_right />
+			<label_ct_init name="label_init" />
+			<label_ct_name name="label_name" />
+
+			<list_ctbox_client />
+			<scrollbar_list />
+			
+			<button_ct_endturn name="turn_complete" />
+			
+			<label_ct_client_rounds />
+			<number_ct_client_rounds />
+
+			<resize_ctbox />
+			<helper_ct />
+			<close_ctbox />
+		</sheetdata>
+	</windowclass>
+</root>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<!-- General combat tracker window (Original) -->
+	<windowclass name="ct_entry">
+		<margins control="0,0,0,2" />
+		<frame>ctentrybox</frame>
+		<sizelimits>
+			<minimum height="40" />
+		</sizelimits>
+		<script file="ct/scripts/ct_entry.lua" />
+		<sheetdata>
+			<hs name="tokenrefid" />
+			<hs name="tokenrefnode" />
+
+			<hsx name="senses" />
+			
+			<spacer_ctentry_active_top name="active_spacer_top" />
+			
+			<button_ctentry_active name="active" />
+			<token_ctentry name="token" />
+			<button_ct_entry_tokenvis name="tokenvis" />
+			<button_ct_entry_isidentified name="isidentified" />
+			
+			<anchor_ct_entry_right name="rightanchor" />
+			<button_ct_entry_idelete name="idelete" />
+			<link_ct_entry name="link" />
+			<button_ct_section_effects name="button_section_effects" />
+			<button_ct_section_space name="button_section_space" />
+			<button_ct_section_targets name="button_section_targets" />
+			<button_ctentry_friendfoe name="friendfoe" />
+
+			<number_ctentry_initresult name="initresult" />
+
+			<string_ct_entry_name name="name" />
+			<string_ct_entry_name_nonid name="nonid_name" />
+			
+			<sub_ct_section name="sub_targets" />
+			<sub_ct_section name="sub_space" />
+			<sub_ct_section name="sub_effects" />
+
+			<!-- Quick labels -->
+			<string_ct_entry_targets name="summary_targets" />
+			<string_ct_entry_effects name="summary_effects" />
+
+			<spacer_ctentry_middle name="spacer" />
+			<spacer_ctentry_active_bottom name="active_spacer_bottom" />
+		</sheetdata>
+	</windowclass>
+</root>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<!-- General combat tracker window (Original) -->
+	<windowclass name="client_ct_entry">
+		<margins control="0,0,0,2" />
+		<frame>ctentrybox</frame>
+		<script file="ct/scripts/clientct_entry.lua" />
+		<sheetdata>
+			<hidden_record_isidentified name="isidentified" />
+			<hlink_clientct name="link" />
+			<hs name="tokenrefid" />
+			<hs name="tokenrefnode" />
+			<hn name="tokenvis" />
+
+			<spacer_ctentry_active_top name="active_spacer_top" />
+
+			<button_clientct_active name="active" />
+			<token_clientct name="token" />
+
+			<anchor_ct_entry_right name="rightanchor" />
+			<button_ct_section_effects name="button_section_effects" />
+			<button_ctentry_friendfoe name="friendfoe" />
+			<number_clientct_init name="initresult" />
+
+			<string_clientct_name name="name" />
+			<string_clientct_name name="nonid_name">
+				<invisible />
+			</string_clientct_name>
+
+			<sub_ct_section name="sub_effects" />
+
+			<string_ct_entry_targets name="summary_targets" />
+			<string_ct_entry_effects name="summary_effects" />
+			
+			<spacer_ctentry_middle name="spacer" />
+			<spacer_ctentry_active_bottom name="active_spacer_bottom" />
+		</sheetdata>
+	</windowclass>
+</root>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<!-- Section - Effects -->
+	<windowclass name="client_ct_section_effects">
+		<sizelimits>
+			<minimum height="40" />
+		</sizelimits>
+		<sheetdata>
+			<icon_ct_section name="icon_section">
+				<icon>button_effect_down</icon>
+			</icon_ct_section>
+			<list_clientct_section_effects name="effects" />
+		</sheetdata>
+	</windowclass>
+	<windowclass name="clientct_effect">
+		<frame>cteffect</frame>
+		<margins control="0,0,0,3" />
+		<script file="ct/scripts/ct_effect.lua" />
+		<sheetdata>
+			<anchor_clientct_effect_left name="leftanchor" />
+			<button_clientct_effect_isactive name="isactive" />
+
+			<anchor_clientct_effect_right name="rightanchor" />
+			<button_clientct_effect_idelete name="idelete" />
+			<button_ct_effect_targetadd name="targeting_add_button" />
+
+			<string_clientct_effect name="label" />
+
+			<string_ct_effect_targets name="target_summary" />
+		</sheetdata>
+	</windowclass>
+</root>
