@@ -9,10 +9,10 @@
 	<windowclass name="charsheet">
 		<frame>charsheet</frame>
 		<placement>
-			<size width="525" height="568" />
+			<size width="845" height="750" />
 		</placement>
 		<sizelimits>
-			<minimum width="525" height="568" />
+			<minimum width="845" height="750" />
 			<dynamic />
 		</sizelimits>
 		<minimize>minimized_npc</minimize>
@@ -88,6 +88,7 @@
 			</token_char>
 			
 			<frame_char name="overviewframe">
+				<!-- <anchored to="rightanchor" height="80"> -->
 				<anchored to="rightanchor" height="45">
 					<top />
 					<left parent="" offset="50" />
@@ -108,6 +109,26 @@
 				<anchored to="blood" position="right" offset="10,0" width="100" height="20" />
 				<labelres>char_label_bone</labelres>
 			</string_labeled>
+			<!-- <string_labeled name="auspice">
+				<anchored to="overviewframe" position="insidebottomleft" offset="15,20"  width="100" height="20" />
+				<labelres>char_label_auspice</labelres>
+			</string_labeled>
+			<string_labeled name="tribe">
+				<anchored to="auspice" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_tribe</labelres>
+			</string_labeled>
+			<string_labeled name="chronicle">
+				<anchored to="tribe" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_chronicle</labelres>
+			</string_labeled>
+			<string_labeled name="concept">
+				<anchored to="chronicle" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_concept</labelres>
+			</string_labeled>
+			<string_labeled name="lodge">
+				<anchored to="concept" position="right" offset="10,0" width="100" height="20" />
+				<labelres>char_label_lodge</labelres>
+			</string_labeled> -->
 		</sheetdata>
 	</windowclass>
 </root>
