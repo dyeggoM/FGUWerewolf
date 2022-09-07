@@ -11,7 +11,7 @@
 
 			<!-- HISHU -->
 			<frame_char name="hishuframe">
-				<bounds>15,0,160,400</bounds>
+				<bounds>15,0,160,350</bounds>
 			</frame_char>
 			<StringControl>
 				<anchored>
@@ -36,13 +36,7 @@
 
 			<!-- Hishu Size -->
 			<genericcontrol name="hishuSizeframe">
-				<anchored height="25" width="160">
-					<to>hishuframe</to>
-					<position>insidetopleft</position>
-					<top offset="45" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="hishuframe" position="insidetopleft" offset="10,45" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="hishuSizeLabel">
 				<anchored>
@@ -69,7 +63,7 @@
 					<left>
 						<parent>hishuSizeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>hishuSizeframe</parent>
@@ -87,13 +81,7 @@
 
 			<!-- Hishu Defense -->
 			<genericcontrol name="hishuDefenseframe">
-				<anchored height="25" width="160">
-					<to>hishuframe</to>
-					<position>insidetopleft</position>
-					<top offset="70" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="hishuSizeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="hishuDefenseLabel">
 				<anchored>
@@ -120,7 +108,7 @@
 					<left>
 						<parent>hishuDefenseframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>hishuDefenseframe</parent>
@@ -138,13 +126,7 @@
 
 			<!-- Hishu Initiative -->
 			<genericcontrol name="hishuInitiativeframe">
-				<anchored height="25" width="160">
-					<to>hishuframe</to>
-					<position>insidetopleft</position>
-					<top offset="95" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="hishuDefenseframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="hishuInitiativeLabel">
 				<anchored>
@@ -171,7 +153,7 @@
 					<left>
 						<parent>hishuInitiativeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>hishuInitiativeframe</parent>
@@ -189,13 +171,7 @@
 
 			<!-- Hishu Speed -->
 			<genericcontrol name="hishuSpeedframe">
-				<anchored height="25" width="160">
-					<to>hishuframe</to>
-					<position>insidetopleft</position>
-					<top offset="120" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="hishuInitiativeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="hishuSpeedLabel">
 				<anchored>
@@ -222,7 +198,7 @@
 					<left>
 						<parent>hishuSpeedframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>hishuSpeedframe</parent>
@@ -240,13 +216,7 @@
 
 			<!-- Hishu Armor -->
 			<genericcontrol name="hishuArmorframe">
-				<anchored height="25" width="160">
-					<to>hishuframe</to>
-					<position>insidetopleft</position>
-					<top offset="145" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="hishuSpeedframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="hishuArmorLabel">
 				<anchored>
@@ -273,7 +243,7 @@
 					<left>
 						<parent>hishuArmorframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>hishuArmorframe</parent>
@@ -291,13 +261,7 @@
 
 			<!-- Hishu Perception -->
 			<genericcontrol name="hishuPerceptionframe">
-				<anchored height="25" width="160">
-					<to>hishuframe</to>
-					<position>insidetopleft</position>
-					<top offset="170" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="hishuArmorframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="hishuPerceptionLabel">
 				<anchored>
@@ -324,7 +288,7 @@
 					<left>
 						<parent>hishuPerceptionframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>hishuPerceptionframe</parent>
@@ -342,10 +306,9 @@
 
 			<!-- Hishu Information -->
 			<genericcontrol name="hishuInformationframe">
-				<anchored height="25" width="160">
+				<anchored height="25" width="150">
 					<to>hishuframe</to>
 					<position>insidebottom</position>
-					<!-- <top offset="170" /> -->
 					<bottom offset="0"/>
 					<left offset="10" />
 					<right offset="-10" />
@@ -365,7 +328,7 @@
 
 			<!-- DALU -->
 			<frame_char name="daluframe">
-				<bounds>175,0,160,400</bounds>
+				<bounds>175,0,160,350</bounds>
 			</frame_char>
 			<StringControl>
 				<anchored>
@@ -390,13 +353,7 @@
 
 			<!-- dalu Size -->
 			<genericcontrol name="daluSizeframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="45" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluframe" position="insidetopleft" offset="10,45" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluSizeLabel">
 				<anchored>
@@ -423,7 +380,7 @@
 					<left>
 						<parent>daluSizeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluSizeframe</parent>
@@ -441,13 +398,7 @@
 
 			<!-- dalu Defense -->
 			<genericcontrol name="daluDefenseframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="70" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluSizeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluDefenseLabel">
 				<anchored>
@@ -474,7 +425,7 @@
 					<left>
 						<parent>daluDefenseframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluDefenseframe</parent>
@@ -492,13 +443,7 @@
 
 			<!-- dalu Initiative -->
 			<genericcontrol name="daluInitiativeframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="95" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluDefenseframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluInitiativeLabel">
 				<anchored>
@@ -525,7 +470,7 @@
 					<left>
 						<parent>daluInitiativeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluInitiativeframe</parent>
@@ -543,13 +488,7 @@
 
 			<!-- dalu Speed -->
 			<genericcontrol name="daluSpeedframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="120" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluInitiativeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluSpeedLabel">
 				<anchored>
@@ -576,7 +515,7 @@
 					<left>
 						<parent>daluSpeedframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluSpeedframe</parent>
@@ -594,13 +533,7 @@
 
 			<!-- dalu Armor -->
 			<genericcontrol name="daluArmorframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="145" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluSpeedframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluArmorLabel">
 				<anchored>
@@ -627,7 +560,7 @@
 					<left>
 						<parent>daluArmorframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluArmorframe</parent>
@@ -645,13 +578,7 @@
 
 			<!-- dalu Perception -->
 			<genericcontrol name="daluPerceptionframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="170" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluArmorframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluPerceptionLabel">
 				<anchored>
@@ -678,7 +605,7 @@
 					<left>
 						<parent>daluPerceptionframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluPerceptionframe</parent>
@@ -696,13 +623,7 @@
 
 			<!-- dalu Strength -->
 			<genericcontrol name="daluStrengthframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="205" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluPerceptionframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluStrengthLabel">
 				<anchored>
@@ -729,7 +650,7 @@
 					<left>
 						<parent>daluStrengthframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluStrengthframe</parent>
@@ -747,13 +668,7 @@
 
 			<!-- dalu Stamina -->
 			<genericcontrol name="daluStaminaframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="230" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluStrengthframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluStaminaLabel">
 				<anchored>
@@ -780,7 +695,7 @@
 					<left>
 						<parent>daluStaminaframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluStaminaframe</parent>
@@ -798,13 +713,7 @@
 
 			<!-- dalu Manipulation -->
 			<genericcontrol name="daluManipulationframe">
-				<anchored height="25" width="160">
-					<to>daluframe</to>
-					<position>insidetopleft</position>
-					<top offset="255" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="daluStaminaframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="daluManipulationLabel">
 				<anchored>
@@ -831,7 +740,7 @@
 					<left>
 						<parent>daluManipulationframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>daluManipulationframe</parent>
@@ -849,10 +758,9 @@
 
 			<!-- dalu Information -->
 			<genericcontrol name="daluInformationframe">
-				<anchored height="25" width="160">
+				<anchored height="25" width="150">
 					<to>daluframe</to>
 					<position>insidebottom</position>
-					<!-- <top offset="170" /> -->
 					<bottom offset="0"/>
 					<left offset="10" />
 					<right offset="-10" />
@@ -906,10 +814,11 @@
 					Badass Motherfucker
 				</static>
 			</StringControl>
-			
+
+
 			<!-- GARU -->
 			<frame_char name="garuframe">
-				<bounds>335,0,160,400</bounds>
+				<bounds>335,0,160,350</bounds>
 			</frame_char>
 			<StringControl>
 				<anchored>
@@ -934,13 +843,7 @@
 
 			<!-- garu Size -->
 			<genericcontrol name="garuSizeframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="45" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuframe" position="insidetopleft" offset="10,45" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuSizeLabel">
 				<anchored>
@@ -967,7 +870,7 @@
 					<left>
 						<parent>garuSizeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuSizeframe</parent>
@@ -985,13 +888,7 @@
 
 			<!-- garu Defense -->
 			<genericcontrol name="garuDefenseframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="70" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuSizeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuDefenseLabel">
 				<anchored>
@@ -1018,7 +915,7 @@
 					<left>
 						<parent>garuDefenseframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuDefenseframe</parent>
@@ -1036,13 +933,7 @@
 
 			<!-- garu Initiative -->
 			<genericcontrol name="garuInitiativeframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="95" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuDefenseframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuInitiativeLabel">
 				<anchored>
@@ -1069,7 +960,7 @@
 					<left>
 						<parent>garuInitiativeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuInitiativeframe</parent>
@@ -1087,13 +978,7 @@
 
 			<!-- garu Speed -->
 			<genericcontrol name="garuSpeedframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="120" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuInitiativeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuSpeedLabel">
 				<anchored>
@@ -1120,7 +1005,7 @@
 					<left>
 						<parent>garuSpeedframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuSpeedframe</parent>
@@ -1137,65 +1022,13 @@
 			</StringField>
 
 			<!-- garu Armor -->
-			<!-- <genericcontrol name="garuArmorframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="145" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+			<genericcontrol name="garuArmorframe">
+				<anchored to="garuSpeedframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
-			<StringControl name="garuArmorLabel">
-				<anchored>
-					<to>garuArmorframe</to>
-					<position>insidetopleft</position>
-					<offset>0,0</offset>
-				</anchored>
-				<center/>
-				<font>sheetlabelmini</font>
-				<static>Armor:</static>
-			</StringControl>
-			<StringField name="garuArmor">
-				<anchored>
-					<top>
-						<parent>garuArmorframe</parent>
-						<anchor>top</anchor>
-						<offset>0</offset>
-					</top>
-					<bottom>
-						<parent>garuArmorframe</parent>
-						<anchor>bottom</anchor>
-						<offset>0</offset>
-					</bottom>
-					<left>
-						<parent>garuArmorframe</parent>
-						<anchor>left</anchor>
-						<offset>85</offset>
-					</left>
-					<right>
-						<parent>garuArmorframe</parent>
-						<anchor>right</anchor>
-						<offset>-15</offset>
-					</right>
-				</anchored>
-				<multilinespacing>20</multilinespacing>
-				<font>sheettext</font>
-				<frame>
-					<name>textline</name>
-					<offset>2,0,2,0</offset>
-				</frame>
-			</StringField> -->
 
 			<!-- garu Perception -->
 			<genericcontrol name="garuPerceptionframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="170" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuArmorframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuPerceptionLabel">
 				<anchored>
@@ -1222,7 +1055,7 @@
 					<left>
 						<parent>garuPerceptionframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuPerceptionframe</parent>
@@ -1240,13 +1073,7 @@
 
 			<!-- garu Strength -->
 			<genericcontrol name="garuStrengthframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="205" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuPerceptionframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuStrengthLabel">
 				<anchored>
@@ -1273,7 +1100,7 @@
 					<left>
 						<parent>garuStrengthframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuStrengthframe</parent>
@@ -1291,13 +1118,7 @@
 
 			<!-- garu Stamina -->
 			<genericcontrol name="garuStaminaframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="230" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuStrengthframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuStaminaLabel">
 				<anchored>
@@ -1324,7 +1145,7 @@
 					<left>
 						<parent>garuStaminaframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuStaminaframe</parent>
@@ -1341,65 +1162,13 @@
 			</StringField>
 
 			<!-- garu Manipulation -->
-			<!-- <genericcontrol name="garuManipulationframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="255" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+			<genericcontrol name="garuManipulationframe">
+				<anchored to="garuStaminaframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
-			<StringControl name="garuManipulationLabel">
-				<anchored>
-					<to>garuManipulationframe</to>
-					<position>insidetopleft</position>
-					<offset>0,0</offset>
-				</anchored>
-				<center/>
-				<font>sheetlabelmini</font>
-				<static>Manipulation(-1):</static>
-			</StringControl>
-			<StringField name="garuManipulation">
-				<anchored>
-					<top>
-						<parent>garuManipulationframe</parent>
-						<anchor>top</anchor>
-						<offset>0</offset>
-					</top>
-					<bottom>
-						<parent>garuManipulationframe</parent>
-						<anchor>bottom</anchor>
-						<offset>0</offset>
-					</bottom>
-					<left>
-						<parent>garuManipulationframe</parent>
-						<anchor>left</anchor>
-						<offset>85</offset>
-					</left>
-					<right>
-						<parent>garuManipulationframe</parent>
-						<anchor>right</anchor>
-						<offset>-15</offset>
-					</right>
-				</anchored>
-				<multilinespacing>20</multilinespacing>
-				<font>sheettext</font>
-				<frame>
-					<name>textline</name>
-					<offset>2,0,2,0</offset>
-				</frame>
-			</StringField> -->
 
 			<!-- garu Dexterity -->
 			<genericcontrol name="garuDexterityframe">
-				<anchored height="25" width="160">
-					<to>garuframe</to>
-					<position>insidetopleft</position>
-					<top offset="280" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="garuManipulationframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="garuDexterityLabel">
 				<anchored>
@@ -1426,7 +1195,7 @@
 					<left>
 						<parent>garuDexterityframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>garuDexterityframe</parent>
@@ -1444,10 +1213,9 @@
 			
 			<!-- garu Information -->
 			<genericcontrol name="garuInformationframe">
-				<anchored height="25" width="160">
+				<anchored height="25" width="150">
 					<to>garuframe</to>
 					<position>insidebottom</position>
-					<!-- <top offset="170" /> -->
 					<bottom offset="0"/>
 					<left offset="10" />
 					<right offset="-10" />
@@ -1538,9 +1306,10 @@
 				</static>
 			</StringControl>
 
+
 			<!-- URSHUL -->
 			<frame_char name="urshulframe">
-				<bounds>495,0,160,400</bounds>
+				<bounds>495,0,160,350</bounds>
 			</frame_char>
 			<StringControl>
 				<anchored>
@@ -1565,13 +1334,7 @@
 
 			<!-- urshul Size -->
 			<genericcontrol name="urshulSizeframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="45" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulframe" position="insidetopleft" offset="10,45" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulSizeLabel">
 				<anchored>
@@ -1598,7 +1361,7 @@
 					<left>
 						<parent>urshulSizeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulSizeframe</parent>
@@ -1616,13 +1379,7 @@
 
 			<!-- urshul Defense -->
 			<genericcontrol name="urshulDefenseframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="70" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulSizeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulDefenseLabel">
 				<anchored>
@@ -1649,7 +1406,7 @@
 					<left>
 						<parent>urshulDefenseframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulDefenseframe</parent>
@@ -1667,13 +1424,7 @@
 
 			<!-- urshul Initiative -->
 			<genericcontrol name="urshulInitiativeframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="95" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulDefenseframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulInitiativeLabel">
 				<anchored>
@@ -1700,7 +1451,7 @@
 					<left>
 						<parent>urshulInitiativeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulInitiativeframe</parent>
@@ -1718,13 +1469,7 @@
 
 			<!-- urshul Speed -->
 			<genericcontrol name="urshulSpeedframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="120" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulInitiativeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulSpeedLabel">
 				<anchored>
@@ -1751,7 +1496,7 @@
 					<left>
 						<parent>urshulSpeedframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulSpeedframe</parent>
@@ -1769,13 +1514,7 @@
 
 			<!-- urshul Armor -->
 			<genericcontrol name="urshulArmorframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="145" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulSpeedframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulArmorLabel">
 				<anchored>
@@ -1802,7 +1541,7 @@
 					<left>
 						<parent>urshulArmorframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulArmorframe</parent>
@@ -1820,13 +1559,7 @@
 
 			<!-- urshul Perception -->
 			<genericcontrol name="urshulPerceptionframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="170" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulArmorframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulPerceptionLabel">
 				<anchored>
@@ -1853,7 +1586,7 @@
 					<left>
 						<parent>urshulPerceptionframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulPerceptionframe</parent>
@@ -1871,13 +1604,7 @@
 
 			<!-- urshul Strength -->
 			<genericcontrol name="urshulStrengthframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="205" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulPerceptionframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulStrengthLabel">
 				<anchored>
@@ -1904,7 +1631,7 @@
 					<left>
 						<parent>urshulStrengthframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulStrengthframe</parent>
@@ -1922,13 +1649,7 @@
 
 			<!-- urshul Stamina -->
 			<genericcontrol name="urshulStaminaframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="230" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulStrengthframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulStaminaLabel">
 				<anchored>
@@ -1955,7 +1676,7 @@
 					<left>
 						<parent>urshulStaminaframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulStaminaframe</parent>
@@ -1973,13 +1694,7 @@
 
 			<!-- urshul Manipulation -->
 			<genericcontrol name="urshulManipulationframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="255" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulStaminaframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulManipulationLabel">
 				<anchored>
@@ -2006,7 +1721,7 @@
 					<left>
 						<parent>urshulManipulationframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulManipulationframe</parent>
@@ -2024,13 +1739,7 @@
 
 			<!-- urshul Dexterity -->
 			<genericcontrol name="urshulDexterityframe">
-				<anchored height="25" width="160">
-					<to>urshulframe</to>
-					<position>insidetopleft</position>
-					<top offset="280" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urshulManipulationframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urshulDexterityLabel">
 				<anchored>
@@ -2057,7 +1766,7 @@
 					<left>
 						<parent>urshulDexterityframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urshulDexterityframe</parent>
@@ -2075,10 +1784,9 @@
 
 			<!-- urshul Information -->
 			<genericcontrol name="urshulInformationframe">
-				<anchored height="25" width="160">
+				<anchored height="25" width="150">
 					<to>urshulframe</to>
 					<position>insidebottom</position>
-					<!-- <top offset="170" /> -->
 					<bottom offset="0"/>
 					<left offset="10" />
 					<right offset="-10" />
@@ -2133,9 +1841,10 @@
 				</static>
 			</StringControl>
 
+
 			<!-- URHAN -->
 			<frame_char name="urhanframe">
-				<bounds>655,0,160,400</bounds>
+				<bounds>655,0,160,350</bounds>
 			</frame_char>
 			<StringControl>
 				<anchored>
@@ -2160,13 +1869,7 @@
 
 			<!-- urhan Size -->
 			<genericcontrol name="urhanSizeframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="45" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanframe" position="insidetopleft" offset="10,45" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanSizeLabel">
 				<anchored>
@@ -2193,7 +1896,7 @@
 					<left>
 						<parent>urhanSizeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanSizeframe</parent>
@@ -2211,13 +1914,7 @@
 
 			<!-- urhan Defense -->
 			<genericcontrol name="urhanDefenseframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="70" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanSizeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanDefenseLabel">
 				<anchored>
@@ -2244,7 +1941,7 @@
 					<left>
 						<parent>urhanDefenseframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanDefenseframe</parent>
@@ -2262,13 +1959,7 @@
 
 			<!-- urhan Initiative -->
 			<genericcontrol name="urhanInitiativeframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="95" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanDefenseframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanInitiativeLabel">
 				<anchored>
@@ -2295,7 +1986,7 @@
 					<left>
 						<parent>urhanInitiativeframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanInitiativeframe</parent>
@@ -2313,13 +2004,7 @@
 
 			<!-- urhan Speed -->
 			<genericcontrol name="urhanSpeedframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="120" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanInitiativeframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanSpeedLabel">
 				<anchored>
@@ -2346,7 +2031,7 @@
 					<left>
 						<parent>urhanSpeedframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanSpeedframe</parent>
@@ -2364,13 +2049,7 @@
 
 			<!-- urhan Armor -->
 			<genericcontrol name="urhanArmorframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="145" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanSpeedframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanArmorLabel">
 				<anchored>
@@ -2397,7 +2076,7 @@
 					<left>
 						<parent>urhanArmorframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanArmorframe</parent>
@@ -2415,13 +2094,7 @@
 
 			<!-- urhan Perception -->
 			<genericcontrol name="urhanPerceptionframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="170" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanArmorframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanPerceptionLabel">
 				<anchored>
@@ -2448,7 +2121,7 @@
 					<left>
 						<parent>urhanPerceptionframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanPerceptionframe</parent>
@@ -2465,65 +2138,13 @@
 			</StringField>
 
 			<!-- urhan Strength -->
-			<!-- <genericcontrol name="urhanStrengthframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="205" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+			<genericcontrol name="urhanStrengthframe">
+				<anchored to="urhanPerceptionframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
-			<StringControl name="urhanStrengthLabel">
-				<anchored>
-					<to>urhanStrengthframe</to>
-					<position>insidetopleft</position>
-					<offset>0,0</offset>
-				</anchored>
-				<center/>
-				<font>sheetlabelmini</font>
-				<static>Strength(+3):</static>
-			</StringControl>
-			<StringField name="urhanStrength">
-				<anchored>
-					<top>
-						<parent>urhanStrengthframe</parent>
-						<anchor>top</anchor>
-						<offset>0</offset>
-					</top>
-					<bottom>
-						<parent>urhanStrengthframe</parent>
-						<anchor>bottom</anchor>
-						<offset>0</offset>
-					</bottom>
-					<left>
-						<parent>urhanStrengthframe</parent>
-						<anchor>left</anchor>
-						<offset>85</offset>
-					</left>
-					<right>
-						<parent>urhanStrengthframe</parent>
-						<anchor>right</anchor>
-						<offset>-15</offset>
-					</right>
-				</anchored>
-				<multilinespacing>20</multilinespacing>
-				<font>sheettext</font>
-				<frame>
-					<name>textline</name>
-					<offset>2,0,2,0</offset>
-				</frame>
-			</StringField> -->
 
 			<!-- urhan Stamina -->
 			<genericcontrol name="urhanStaminaframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="230" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanStrengthframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanStaminaLabel">
 				<anchored>
@@ -2550,7 +2171,7 @@
 					<left>
 						<parent>urhanStaminaframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanStaminaframe</parent>
@@ -2568,13 +2189,7 @@
 
 			<!-- urhan Manipulation -->
 			<genericcontrol name="urhanManipulationframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="255" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanStaminaframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanManipulationLabel">
 				<anchored>
@@ -2601,7 +2216,7 @@
 					<left>
 						<parent>urhanManipulationframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanManipulationframe</parent>
@@ -2619,13 +2234,7 @@
 
 			<!-- urhan Dexterity -->
 			<genericcontrol name="urhanDexterityframe">
-				<anchored height="25" width="160">
-					<to>urhanframe</to>
-					<position>insidetopleft</position>
-					<top offset="280" />
-					<left offset="10" />
-					<right offset="-10" />
-				</anchored>
+				<anchored to="urhanManipulationframe" position="insidetopleft" offset="0,20" width="150" height="20" />
 			</genericcontrol>
 			<StringControl name="urhanDexterityLabel">
 				<anchored>
@@ -2652,7 +2261,7 @@
 					<left>
 						<parent>urhanDexterityframe</parent>
 						<anchor>left</anchor>
-						<offset>85</offset>
+						<offset>95</offset>
 					</left>
 					<right>
 						<parent>urhanDexterityframe</parent>
@@ -2670,10 +2279,9 @@
 
 			<!-- urhan Information -->
 			<genericcontrol name="urhanInformationframe">
-				<anchored height="25" width="160">
+				<anchored height="25" width="150">
 					<to>urhanframe</to>
 					<position>insidebottom</position>
-					<!-- <top offset="170" /> -->
 					<bottom offset="0"/>
 					<left offset="10" />
 					<right offset="-10" />
@@ -2704,6 +2312,1130 @@
 				</static>
 			</StringControl>
 
+
+			<!-- TOTEM -->
+			<frame_char name="totemframe">
+				<bounds>15,355,270,550</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>totemframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>TOTEM</static>
+			</StringControl>
+
+			<genericcontrol name="totemAttributesFrame">
+				<anchored to="totemframe" position="insidetopleft" offset="10,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemAttributesLabel">
+				<anchored>
+					<to>totemAttributesFrame</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Attributes:</static>
+			</StringControl>
+
+			<genericcontrol name="totemPowerframe">
+				<anchored to="totemAttributesFrame" position="insidetopleft" offset="20,20" width="230" height="20" />
+			</genericcontrol>
+			<StringControl name="totemPowerLabel">
+				<anchored>
+					<to>totemPowerframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Power:</static>
+			</StringControl>
+			<StringField name="totemPower">
+				<anchored>
+					<top>
+						<parent>totemPowerframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemPowerframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemPowerframe</parent>
+						<anchor>left</anchor>
+						<offset>75</offset>
+					</left>
+					<right>
+						<parent>totemPowerframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemFinesseframe">
+				<anchored to="totemPowerframe" position="insidetopleft" offset="0,20" width="230" height="20" />
+			</genericcontrol>
+			<StringControl name="totemFinesseLabel">
+				<anchored>
+					<to>totemFinesseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Finesse:</static>
+			</StringControl>
+			<StringField name="totemFinesse">
+				<anchored>
+					<top>
+						<parent>totemFinesseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemFinesseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemFinesseframe</parent>
+						<anchor>left</anchor>
+						<offset>75</offset>
+					</left>
+					<right>
+						<parent>totemFinesseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemResistanceframe">
+				<anchored to="totemFinesseframe" position="insidetopleft" offset="0,20" width="230" height="20" />
+			</genericcontrol>
+			<StringControl name="totemResistanceLabel">
+				<anchored>
+					<to>totemResistanceframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Resistance:</static>
+			</StringControl>
+			<StringField name="totemResistance">
+				<anchored>
+					<top>
+						<parent>totemResistanceframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemResistanceframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemResistanceframe</parent>
+						<anchor>left</anchor>
+						<offset>75</offset>
+					</left>
+					<right>
+						<parent>totemResistanceframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemWillpowerframe">
+				<anchored to="totemResistanceframe" position="insidetopleft" offset="-20,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemWillpowerLabel">
+				<anchored>
+					<to>totemWillpowerframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Willpower:</static>
+			</StringControl>
+			<StringField name="totemWillpower">
+				<anchored>
+					<top>
+						<parent>totemWillpowerframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemWillpowerframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemWillpowerframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemWillpowerframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemEssenceframe">
+				<anchored to="totemWillpowerframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemEssenceLabel">
+				<anchored>
+					<to>totemEssenceframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Essence:</static>
+			</StringControl>
+			<StringField name="totemEssence">
+				<anchored>
+					<top>
+						<parent>totemEssenceframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemEssenceframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemEssenceframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemEssenceframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemInitiativeframe">
+				<anchored to="totemEssenceframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemInitiativeLabel">
+				<anchored>
+					<to>totemInitiativeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Initiative:</static>
+			</StringControl>
+			<StringField name="totemInitiative">
+				<anchored>
+					<top>
+						<parent>totemInitiativeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemInitiativeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemInitiativeframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemInitiativeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemDefenseframe">
+				<anchored to="totemInitiativeframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemDefenseLabel">
+				<anchored>
+					<to>totemDefenseframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Defense:</static>
+			</StringControl>
+			<StringField name="totemDefense">
+				<anchored>
+					<top>
+						<parent>totemDefenseframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemDefenseframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemDefenseframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemDefenseframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemSpeedframe">
+				<anchored to="totemDefenseframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemSpeedLabel">
+				<anchored>
+					<to>totemSpeedframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Speed:</static>
+			</StringControl>
+			<StringField name="totemSpeed">
+				<anchored>
+					<top>
+						<parent>totemSpeedframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemSpeedframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemSpeedframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemSpeedframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemSizeframe">
+				<anchored to="totemSpeedframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemSizeLabel">
+				<anchored>
+					<to>totemSizeframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Size:</static>
+			</StringControl>
+			<StringField name="totemSize">
+				<anchored>
+					<top>
+						<parent>totemSizeframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemSizeframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemSizeframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemSizeframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemCorpusframe">
+				<anchored to="totemSizeframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemCorpusLabel">
+				<anchored>
+					<to>totemCorpusframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Corpus:</static>
+			</StringControl>
+			<StringField name="totemCorpus">
+				<anchored>
+					<top>
+						<parent>totemCorpusframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemCorpusframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemCorpusframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemCorpusframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemInfluencesFrame">
+				<anchored to="totemCorpusframe" position="insidetopleft" offset="0,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemInfluencesLabel">
+				<anchored>
+					<to>totemInfluencesFrame</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Influences:</static>
+			</StringControl>
+
+			<genericcontrol name="totemInfluence1frame">
+				<anchored to="totemInfluencesFrame" position="insidetopleft" offset="20,20" width="230" height="20" />
+			</genericcontrol>
+			<StringField name="totemInfluence1">
+				<anchored>
+					<top>
+						<parent>totemInfluence1frame</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemInfluence1frame</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemInfluence1frame</parent>
+						<anchor>left</anchor>
+						<offset>0</offset>
+					</left>
+					<right>
+						<parent>totemInfluence1frame</parent>
+						<anchor>right</anchor>
+						<offset>-70</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<DotControl name="totemInfluence1Dots">
+				<anchored to="totemInfluence1" position="right" offset="10,0" width="70" height="20" />
+				<dots>5</dots>
+			</DotControl>
+
+			<genericcontrol name="totemInfluence2frame">
+				<anchored to="totemInfluence1frame" position="insidetopleft" offset="0,20" width="230" height="20" />
+			</genericcontrol>
+			<StringField name="totemInfluence2">
+				<anchored>
+					<top>
+						<parent>totemInfluence2frame</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemInfluence2frame</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemInfluence2frame</parent>
+						<anchor>left</anchor>
+						<offset>0</offset>
+					</left>
+					<right>
+						<parent>totemInfluence2frame</parent>
+						<anchor>right</anchor>
+						<offset>-70</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<DotControl name="totemInfluence2Dots">
+				<anchored to="totemInfluence2" position="right" offset="10,0" width="70" height="20" />
+				<dots>5</dots>
+			</DotControl>
+
+			<genericcontrol name="totemInfluence3frame">
+				<anchored to="totemInfluence2frame" position="insidetopleft" offset="0,20" width="230" height="20" />
+			</genericcontrol>
+			<StringField name="totemInfluence3">
+				<anchored>
+					<top>
+						<parent>totemInfluence3frame</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemInfluence3frame</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemInfluence3frame</parent>
+						<anchor>left</anchor>
+						<offset>0</offset>
+					</left>
+					<right>
+						<parent>totemInfluence3frame</parent>
+						<anchor>right</anchor>
+						<offset>-70</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<DotControl name="totemInfluence3Dots">
+				<anchored to="totemInfluence3" position="right" offset="10,0" width="70" height="20" />
+				<dots>5</dots>
+			</DotControl>
+
+			<genericcontrol name="totemAspirationframe">
+				<anchored to="totemInfluence3frame" position="insidetopleft" offset="-20,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemAspirationLabel">
+				<anchored>
+					<to>totemAspirationframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Aspiration:</static>
+			</StringControl>
+			<StringField name="totemAspiration">
+				<anchored>
+					<top>
+						<parent>totemAspirationframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemAspirationframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemAspirationframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemAspirationframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<StringField name="totemAspiration2">
+				<anchored to="totemAspirationframe" position="insidetopleft" offset="15,20" width="220" height="20" />
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemNuminaframe">
+				<anchored to="totemAspirationframe" position="insidetopleft" offset="0,40" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemNuminaLabel">
+				<anchored>
+					<to>totemNuminaframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Numina:</static>
+			</StringControl>
+			<StringField name="totemNumina">
+				<anchored>
+					<top>
+						<parent>totemNuminaframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemNuminaframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemNuminaframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemNuminaframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<StringField name="totemNumina2">
+				<anchored to="totemNuminaframe" position="insidetopleft" offset="15,20" width="220" height="20" />
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<StringField name="totemNumina3">
+				<anchored to="totemNuminaframe" position="insidetopleft" offset="15,40" width="220" height="20" />
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemBonusesframe">
+				<anchored to="totemNuminaframe" position="insidetopleft" offset="0,60" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemBonusesLabel">
+				<anchored>
+					<to>totemBonusesframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Bonuses:</static>
+			</StringControl>
+			<StringField name="totemBonuses">
+				<anchored>
+					<top>
+						<parent>totemBonusesframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemBonusesframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemBonusesframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemBonusesframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<StringField name="totemBonuses2">
+				<anchored to="totemBonusesframe" position="insidetopleft" offset="15,20" width="220" height="20" />
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<StringField name="totemBonuses3">
+				<anchored to="totemBonusesframe" position="insidetopleft" offset="15,40" width="220" height="20" />
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemBanframe">
+				<anchored to="totemBonusesframe" position="insidetopleft" offset="0,60" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemBanLabel">
+				<anchored>
+					<to>totemBanframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Ban:</static>
+			</StringControl>
+			<StringField name="totemBan">
+				<anchored>
+					<top>
+						<parent>totemBanframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemBanframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemBanframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemBanframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<StringField name="totemBan2">
+				<anchored to="totemBanframe" position="insidetopleft" offset="15,20" width="220" height="20" />
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<genericcontrol name="totemBaneframe">
+				<anchored to="totemBanframe" position="insidetopleft" offset="0,40" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="totemBaneLabel">
+				<anchored>
+					<to>totemBaneframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabelmini</font>
+				<static>Bane:</static>
+			</StringControl>
+			<StringField name="totemBane">
+				<anchored>
+					<top>
+						<parent>totemBaneframe</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>totemBaneframe</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>totemBaneframe</parent>
+						<anchor>left</anchor>
+						<offset>95</offset>
+					</left>
+					<right>
+						<parent>totemBaneframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+
+			<!-- GIFTS -->
+			<frame_char name="giftsframe">
+				<bounds>285,355,265,550</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>giftsframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>GIFTS</static>
+			</StringControl>
+
+			<genericcontrol name="moonGiftFrame">
+				<anchored to="giftsframe" position="insidetopleft" offset="15,20" width="250" height="20" />
+			</genericcontrol>
+			<StringControl name="moonGiftLabel">
+				<anchored>
+					<to>moonGiftFrame</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Moon Gifts:</static>
+			</StringControl>
+
+			<genericcontrol name="moonGift1frame">
+				<anchored to="moonGiftFrame" position="insidetopleft" offset="20,20" width="230" height="20" />
+			</genericcontrol>
+			<StringField name="moonGift1">
+				<anchored>
+					<top>
+						<parent>moonGift1frame</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>moonGift1frame</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>moonGift1frame</parent>
+						<anchor>left</anchor>
+						<offset>0</offset>
+					</left>
+					<right>
+						<parent>moonGift1frame</parent>
+						<anchor>right</anchor>
+						<offset>-70</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<DotControl name="moonGift1Dots">
+				<anchored to="moonGift1" position="right" offset="10,0" width="70" height="20" />
+				<dots>5</dots>
+			</DotControl>
+
+			<genericcontrol name="moonGift2frame">
+				<anchored to="moonGift1frame" position="insidetopleft" offset="0,20" width="230" height="20" />
+			</genericcontrol>
+			<StringField name="moonGift2">
+				<anchored>
+					<top>
+						<parent>moonGift2frame</parent>
+						<anchor>top</anchor>
+						<offset>0</offset>
+					</top>
+					<bottom>
+						<parent>moonGift2frame</parent>
+						<anchor>bottom</anchor>
+						<offset>0</offset>
+					</bottom>
+					<left>
+						<parent>moonGift2frame</parent>
+						<anchor>left</anchor>
+						<offset>0</offset>
+					</left>
+					<right>
+						<parent>moonGift2frame</parent>
+						<anchor>right</anchor>
+						<offset>-70</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			<DotControl name="moonGift2Dots">
+				<anchored to="moonGift2" position="right" offset="10,0" width="70" height="20" />
+				<dots>5</dots>
+			</DotControl>
+
+			<genericcontrol name="shadowGiftframe">
+				<anchored to="moonGift2frame" position="insidetopleft" offset="-20,30" width="250" height="220" />
+			</genericcontrol>
+			<StringControl>
+				<anchored>
+					<to>shadowGiftframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Shadow Gifts:</static>
+			</StringControl>
+			<StringField name="shadowGifts">
+				<anchored>
+					<top>
+						<parent>shadowGiftframe</parent>
+						<anchor>top</anchor>
+						<offset>20</offset>
+					</top>
+					<bottom>
+						<parent>shadowGiftframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>shadowGiftframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>shadowGiftframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+			
+			<genericcontrol name="wolfGiftframe">
+				<anchored to="shadowGiftframe" position="insidetopleft" offset="0,220" width="250" height="220" />
+			</genericcontrol>
+			<StringControl>
+				<anchored>
+					<to>wolfGiftframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Wolf Gifts:</static>
+			</StringControl>
+			<StringField name="wolfGifts">
+				<anchored>
+					<top>
+						<parent>wolfGiftframe</parent>
+						<anchor>top</anchor>
+						<offset>20</offset>
+					</top>
+					<bottom>
+						<parent>wolfGiftframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>wolfGiftframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>wolfGiftframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
+
+			<!-- RITES -->
+			<frame_char name="ritesframe">
+				<bounds>550,355,265,550</bounds>
+			</frame_char>
+			<StringControl>
+				<anchored>
+					<to>ritesframe</to>
+					<position>insidetop</position>
+					<offset>0,8</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>RITES</static>
+			</StringControl>
+			
+			<genericcontrol name="riteframe">
+				<anchored to="ritesframe" position="insidetopleft" offset="15,20" width="250" height="500" />
+			</genericcontrol>
+			<StringControl>
+				<anchored>
+					<to>riteframe</to>
+					<position>insidetopleft</position>
+					<offset>0,0</offset>
+				</anchored>
+				<center/>
+				<font>sheetlabel</font>
+				<static>Rites:</static>
+			</StringControl>
+			<StringField name="rites">
+				<anchored>
+					<top>
+						<parent>riteframe</parent>
+						<anchor>top</anchor>
+						<offset>20</offset>
+					</top>
+					<bottom>
+						<parent>riteframe</parent>
+						<anchor>bottom</anchor>
+						<offset>-10</offset>
+					</bottom>
+					<left>
+						<parent>riteframe</parent>
+						<anchor>left</anchor>
+						<offset>15</offset>
+					</left>
+					<right>
+						<parent>riteframe</parent>
+						<anchor>right</anchor>
+						<offset>-15</offset>
+					</right>
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+				<font>sheettext</font>
+				<frame>
+					<name>textline</name>
+					<offset>2,0,2,0</offset>
+				</frame>
+			</StringField>
 
 		</sheetdata>
 	</windowclass>
